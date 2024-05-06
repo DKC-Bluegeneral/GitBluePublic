@@ -1,0 +1,25 @@
+**CIA Triad**
+	Confidentiality
+		-Insert Stuff Here
+	Integrity
+		-Insert Stuff Here
+	Avaliability
+		-Insert Stuff Here
+
+
+
+
+**Non-Repudiation**
+	-Enforcing the inability of a subject to deny that they participated in a digital transaction, agreement, contract, or communication such as an email.
+	-Non-repudiation is the property of agreeing to adhere to an obligation
+		-More specifically, it is the inability to refute responsibility.
+
+
+**Authentication, Authorization, and Accounting**
+
+-Authentication
+	-the process of validating that an entity (user, application, or system) is who or what they claim to be
+-Authentication
+	-the process of granting an authenticated entity permission to acccess a resource or perform a specific function
+-Accounting
+	-basically, when did the entity begin, when did it end, and how long did they do it?
