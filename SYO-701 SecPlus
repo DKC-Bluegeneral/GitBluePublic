@@ -1,14 +1,12 @@
 **CIA Triad**
-	Confidentiality
+	-Confidentiality
 		-Confidentiality ensures that information is accessible only to those who are authorized to view or use it. It involves protecting sensitive data from unauthorized access, disclosure, or interception. Measures such as encryption, access controls, and data classification help maintain confidentiality.
 
-	Integrity
+	-Integrity
 		-Integrity ensures that information remains accurate, complete, and trustworthy throughout its lifecycle. It involves protecting data from unauthorized modification, deletion, or corruption. Techniques such as checksums, digital signatures, and access controls help verify data integrity and prevent unauthorized changes.
 
-	Avaliability
+	-Avaliability
 		-Availability ensures that information and resources are accessible and usable when needed by authorized users. It involves maintaining continuous and reliable access to systems, networks, and data, even in the face of disruptions or attacks. Redundancy, backups, disaster recovery plans, and fault-tolerant systems are used to maximize availability and minimize downtime.
-
-
 
 
 **Non-Repudiation**
@@ -19,13 +17,13 @@
 
 **Authentication, Authorization, and Accounting**
 
-	Authentication
+	-Authentication
 		-the process of validating that an entity (user, application, or system) is who or what they claim to be
 
-	Authorization
+	-Authorization
 		-the process of granting an authenticated entity permission to acccess a resource or perform a specific function
 
-	Accounting
+	-Accounting
 		-basically, when did the entity begin, when did it end, and how long did they do it?
 
 	**Character vs Packet Mode**
@@ -37,7 +35,8 @@
 			-Packet mode, also known as packet-switched mode, is a method of data transmission where data is organized into packets before being transmitted over a network. Each packet contains both data and control information, including source and destination addresses, error checking codes, and sequencing information.
 
 
-	Authorization Models
+**Authorization Models**
+
 		-DAC (Discretionary Access Control):
 			-Discretionary Access Control grants access controls decisions to the resource owners and custodians.
 			-Each resource typically has an owner who determines the access permissions and shares. 
@@ -73,5 +72,60 @@
 			-Attributes could include user attributes (Job Title, Department, Etc), Resource Attributes (Sensitivity level, classification, etc.), and enviromental attributes (time fo access, location, etc.).
 			-Authorization policies are defined using these combinations, and decisiona are made based on evaluating the attributes against the defined policies.
 
+
 		-ABDAC (Attribute-based dynamic access control):
-			-
+			-Combines principals of ABDAC and DAC.
+			-Considers dynamic factors such as risk assessment, user attributes, resource attributes, and contextual information to make access control decisions in real time.
+			-ABDAC provides more fine-grained and context-aware access control needed in "zero-trust" enviroments when compared to other more static access control models.
+				-May include dynamic machine learning techniques such as user behavioral analytics (UBA) in next generation enviroments. 
+
+
+		-RBAC (Rule-based Access Control):
+			-Access control rules define conditions or criteria that must be met for access to be granted. 
+			-Rules can be based on several factors, such as user attributes, resource attributes, time of access, and more. 
+
+
+**Control Categories**
+
+	-Technical Controls: 
+		-These controls involve the use of technology to protect information systems, networks, and data. Examples include:
+			-Firewalls, encryption, access controls, antivirus software, IDS, SIEM, and SOAR.
+
+	-Managerial Controls:
+		-These controls focus on policies, procedures, and administrative measures to manage and oversee security within an organization. Examples include:
+			-Security policies, risk management processes, security training and awareness programs, and incident response plans.
+
+	-Operational Controls:
+		-These controls deal with the day-to-day operational aspects of security, including the implementation and enforcement of security policies and procedures. Examples include:
+			-Access control procedures, backup and recovery processes, change management procedures, and system monitoring.
+
+	-Physical Controls:
+		-These controls involve measures to protect physical assets, facilities, and resources from unauthorized access, damage, or theft. Examples include:
+			-Locks and keys, access control systems, surveillance cameras, perimeter fencing, and environmental controls such as fire suppression systems.
+
+
+**Control Types**
+	-Preventive Controls:
+		-These controls aim to prevent security incidents from occurring by implementing measures that stop or minimize the likelihood of threats and vulnerabilities being exploited. Examples include:
+			-Firewalls, access control lists, encryption, and security awareness training.
+
+	-Deterrent Controls:
+		-Deterrent controls are intended to discourage potential attackers from attempting to exploit vulnerabilities by increasing the perceived risk or effort required. Examples include:
+			-Security signage, visible security cameras, and security patrols.
+
+	-Detective Controls:
+		-Detective controls are used to identify and detect security incidents or breaches after they have occurred. These controls help in monitoring and alerting security teams to abnormal or suspicious activities. Examples include:
+			-Intrusion detection systems, security logs and auditing, and security incident response teams.
+
+	-Corrective Controls:
+		-Corrective controls are implemented to mitigate the impact of security incidents and restore systems to their normal functioning state. These controls aim to address the root cause of the issue and prevent similar incidents from occurring in the future. Examples include:
+			-System backups, patch management, and incident response procedures.
+
+	-Compensating Controls:
+		-Compensating controls are alternative measures implemented to provide an equivalent level of security when primary controls cannot be implemented or are ineffective. These controls help in mitigating risks and maintaining security posture. Examples include:
+			-Multi-factor authentication, compensating controls for legacy systems, and security monitoring tools.
+
+	-Directive Controls:
+		-Directive controls establish policies, guidelines, and procedures to direct behavior and actions within an organization to ensure compliance with security objectives. These controls provide guidance on security requirements and expectations for employees and stakeholders. Examples include:
+			-Security policies, standards, and procedures, security training programs, and access control policies.
+
