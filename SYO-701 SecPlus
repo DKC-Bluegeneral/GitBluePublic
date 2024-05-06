@@ -129,3 +129,45 @@
 		-Directive controls establish policies, guidelines, and procedures to direct behavior and actions within an organization to ensure compliance with security objectives. These controls provide guidance on security requirements and expectations for employees and stakeholders. Examples include:
 			-Security policies, standards, and procedures, security training programs, and access control policies.
 
+
+**Privelege Escilation**
+	-This is more of a phase for a multi-stage attack, not just an attack it's self. 
+	-Privelege escilation can occur during the attack, part of the kill chain, or during pen-testing
+	-Can be vertical or horizontal.
+		-APT (Advanced Persistant Threats) often attempt an escilation of access priveleges soon after the initial compromise phase. 
+		-The goal is to become the root/admin user on the device
+		-Least privelege is key
+	-Having current versions of all software (OS, applications, etc) can help mitigate this.
+	-SUID (Set User ID [SUDO]) It is a special permission in Unix-like operating systems that allows users to execute a file with the permissions of the file's owner or group, rather than with the permissions of the user who is executing it.
+
+
+**Cross Site Scripting (XSS)**
+	-Flaws in pages rendered by web servers and not the web server code itself (i.e. Apache, IIS) where malicious scripts or code are injected into trusted or innocent web site pages.
+
+	-Malicious scripts can steal cookies, session tokens, or other sensitive data stored by the browser and used with the site.
+
+	-Attacker typically sends browser-side scripts to end user
+
+	-Can occur anytime a web program uses user imput within the output it generates without validating or encoding
+
+	-XSS Types:
+		-DOM (Document Object Model) Based XSS (Local or Type 0):
+			-In this type of XSS attack, the malicious script is injected and executed client-side by modifying the DOM  directly.
+			-Example: An attacker modifies the URL parameter `?name=<script>alert('XSS')</script>` on a vulnerable webpage. The script modifies the DOM to display an alert when the page loads, executing the attack on the user's browser.
+
+		-Reflected XSS (Nonpersistant or Type 1):
+			-In a reflected XSS attack, the malicious script is embedded in a URL or input field, and the server reflects the injected script back to the user's browser without proper validation or encoding.
+			-Example: An attacker crafts a phishing email containing a link to a vulnerable website with the payload `http://vulnerable-site.com/?search=<script>alert('XSS')</script>`. When the victim clicks the link and the search parameter is reflected on the page without sanitization, the script is executed in the victim's browser.
+
+		-Stored XSS (Persistant or Type 2):
+			-Stored XSS occurs when the malicious script is permanently stored on the target server, typically in a database or user-generated content, and is then served to other users who access the affected page.
+			-Example: An attacker posts a malicious script as a comment on a blog or forum, such as `<script>alert('XSS')</script>`. When other users visit the page containing the comment, the script executes in their browsers, potentially compromising their accounts or stealing sensitive information.
+
+
+**Request Forgery (CSRF/XSRF)**
+	-Attack forces an end user to perform undesirable actions in a web application in which they are authenticated
+	-An effective CSRF/XSRF attack can force users to perform state-changing requsts such as:
+		-Transferring Funds
+		-Changing their E-Mail address
+		-Changing their password
+	-If a victim is an admin account, the CSRF attack can compromise the entire web application. 
