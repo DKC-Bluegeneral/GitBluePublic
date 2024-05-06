@@ -1,0 +1,77 @@
+**CIA Triad**
+	Confidentiality
+		-Confidentiality ensures that information is accessible only to those who are authorized to view or use it. It involves protecting sensitive data from unauthorized access, disclosure, or interception. Measures such as encryption, access controls, and data classification help maintain confidentiality.
+
+	Integrity
+		-Integrity ensures that information remains accurate, complete, and trustworthy throughout its lifecycle. It involves protecting data from unauthorized modification, deletion, or corruption. Techniques such as checksums, digital signatures, and access controls help verify data integrity and prevent unauthorized changes.
+
+	Avaliability
+		-Availability ensures that information and resources are accessible and usable when needed by authorized users. It involves maintaining continuous and reliable access to systems, networks, and data, even in the face of disruptions or attacks. Redundancy, backups, disaster recovery plans, and fault-tolerant systems are used to maximize availability and minimize downtime.
+
+
+
+
+**Non-Repudiation**
+	-Enforcing the inability of a subject to deny that they participated in a digital transaction, agreement, contract, or communication such as an email.
+	-Non-repudiation is the property of agreeing to adhere to an obligation
+		-More specifically, it is the inability to refute responsibility.
+
+
+**Authentication, Authorization, and Accounting**
+
+	Authentication
+		-the process of validating that an entity (user, application, or system) is who or what they claim to be
+
+	Authorization
+		-the process of granting an authenticated entity permission to acccess a resource or perform a specific function
+
+	Accounting
+		-basically, when did the entity begin, when did it end, and how long did they do it?
+
+	**Character vs Packet Mode**
+
+		-Character Mode
+			-In networking, character mode refers to a method of data transmission where individual characters or bytes are sent and received sequentially. Each character is transmitted independently, and there is no inherent structure or formatting imposed on the data stream.
+
+		-Packet Mode
+			-Packet mode, also known as packet-switched mode, is a method of data transmission where data is organized into packets before being transmitted over a network. Each packet contains both data and control information, including source and destination addresses, error checking codes, and sequencing information.
+
+
+	Authorization Models
+		-DAC (Discretionary Access Control):
+			-Discretionary Access Control grants access controls decisions to the resource owners and custodians.
+			-Each resource typically has an owner who determines the access permissions and shares. 
+			-The owner can grand or revoke access rights for other users or groups.
+			-DAC is flexible and allows owners to have fine grained control over access, but it can also result in inconsistant access control desisions.
+			-MOST PRONE TO PRIVELEGE CREEP
+
+
+		-RBAC (Role-based Access Control):
+			-Grants access based on predefined job role or title. 
+			-Users are assigned roles, and access rights and are associated with these roles. 
+			-Instead of directly assigning permissions to individual users, permissions are assigned to roles, and users inherit the access rights associated with their assigned roles, for example:
+				-Various Roles in a hospital or medical center
+				-Built-in roles in a database management system
+			-RBAC streamlines access control administration by grouping users with similar job functions and offering scalable approach to access managment.
+			-Can be mixed with other models for ease of use
+
+
+		-MAC (Mandatory Access Control):
+			-A Strict mathematical model where access to resources is determined by the system based on predefined security labels and rules.
+			-Principals are assigned security clearances or classification levels (Top Secret, Secret, Confidential, Etc.)
+			-Resource objects are labeled with sensitivity levels
+			-Access is granted or denied by comparing these labels and rules, ensuring strict control and preventing unauthorized access.
+			-This is a "Non -Discretionary" model:
+				-A non-discretionary model refers to a security policy where access control decisions are determined by system administrators or security administrators rather than by individual users.
+				-In non-discretionary models, users do not have the discretion to modify or override access control settings for resources.
+				-Access decisions are typically based on predefined rules, such as security labels or classifications assigned to users and resources, rather than on user-defined permissions.
+				-This approach helps enforce strict access controls and reduces the risk of unauthorized access or data breaches.
+
+
+		-ABAC (Attribute-based Access Control):
+			-Grants access based on a combination of characteristics associated with users, resources, and enviromental conditions. 
+			-Attributes could include user attributes (Job Title, Department, Etc), Resource Attributes (Sensitivity level, classification, etc.), and enviromental attributes (time fo access, location, etc.).
+			-Authorization policies are defined using these combinations, and decisiona are made based on evaluating the attributes against the defined policies.
+
+		-ABDAC (Attribute-based dynamic access control):
+			-
