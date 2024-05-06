@@ -1,9 +1,0 @@
-**Free Licensed Copy of Sublime Text**
-
--Download Sublime Text Editor (https://www.sublimetext.com)
--Backup original sublime_text.exe to sublime_text.exe.bak (COPY)
--Go to https://hexed.it/ -> Click Open File (Location sublime_text.exe)
-	-Find in Hex: 80 78 05 00 0f 94 c1
-	-Replace with c6 40 05 01 48 85 c9
--Save or Save As to your desktop as it will probably not let you save to the system folder where sublime_text.exe is located
--When you run it, it will warn you that it is an untrusted program, it's ok. Run it. 
