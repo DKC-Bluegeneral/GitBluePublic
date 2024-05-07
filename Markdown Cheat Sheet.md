@@ -24,3 +24,35 @@
 
 ![alt text](image.jpg)
 
+``` Fenced Code Block ```
+
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+
+
+Here's a sentence with a footnote. [^1]
+
+[^1]: This is the footnote.
+
+### Heading with Custom ID {#custom-id}
+
+
+term
+: definition
+
+~~Strikethrough~~
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
+
+An Emoji is here ---> :joy:
+
+I need to highlight these ==very important words==.
+
+H~2~O  <---- Sub Script
+
+X^2^   <---- Superscript

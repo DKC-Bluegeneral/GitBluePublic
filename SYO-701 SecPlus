@@ -1,215 +1,257 @@
-**Gap Analysis**
-	-Know where you are, and where you need to go.
-	-Common gaps:
-		-Weak credentials or shared credentials
-		-Lack of tested patch management
-		-Violation of least privilege principle
-		-Having no/unenforced acceptable use policies
-		-Poor physical security
-		-Configuration and deployment errors due to lack of change and configuration management
-		-Poor visibility and lack of proper auditing
+# Gap Analysis
 
 
-**Zero trust control plane**
-	-Zero Trust (ZT):
+- Know where you are, and where you need to go.
 
-ZT assumes there is no implicit trust granted to assets to user accounts based solely on their physical or network location based on asset ownership. 
+## Common gaps:
 
-Segregation of duties and high visibility are also emphasized 
+- Weak credentials or shared credentials
+- Lack of tested patch management
+- Violation of least privilege principle
+- Having no/unenforced acceptable use policies
+- Poor physical security
+- Configuration and deployment errors due to lack of change and configuration management
+- Poor visibility and lack of proper auditing
 
-Adaptive identity is another key ZT component. It’s also called adaptive authentication, or risk based authentication. It is  a method of access to data that matches user credentials with the risk of the requested authorization. 
 
-Zero Trust Control Plane is separate from the data plane, and contains the policy decision point (PDP), which includes:
+# Zero trust control plane
+
+
+## Zero Trust (ZT):
+
+- ZT assumes there is no implicit trust granted to assets to user accounts based solely on their physical or network location based on asset ownership. 
+
+- Segregation of duties and high visibility are also emphasized 
+
+- Adaptive identity is another key ZT component. It’s also called adaptive authentication, or risk based authentication. It is  a method of access to data that matches user credentials with the risk of the requested authorization. 
+
+- Zero Trust Control Plane is separate from the data plane, and contains the policy decision point (PDP), which includes:
 The Policy engine (PE), which uses the enterprise policy-driven access control panel (as well as input from external sources) to grant, deny, or revoke access to resources. 
 The policy administrator (PA) which enables or shuts down the communication path between subject and a resource  via commands to associated policy enforcement points (PEPs)
 
-The PA communicates with the PEP when creating the communication path via the control plane. 
+- The PA communicates with the PEP when creating the communication path via the control plane. 
 
 
 
 
 
-##Add Previous notes above this text------------------------------------------------------------------------------------------
+## Add Previous notes above this text------------------------------------------------------------------------------------------
 
 
 
 
 
+# CIA Triad
 
 
-**CIA Triad**
-	-Confidentiality
-		-Confidentiality ensures that information is accessible only to those who are authorized to view or use it. It involves protecting sensitive data from unauthorized access, disclosure, or interception. Measures such as encryption, access controls, and data classification help maintain confidentiality.
+## Confidentiality
 
-	-Integrity
-		-Integrity ensures that information remains accurate, complete, and trustworthy throughout its life-cycle. It involves protecting data from unauthorized modification, deletion, or corruption. Techniques such as checksum, digital signatures, and access controls help verify data integrity and prevent unauthorized changes.
+- Confidentiality ensures that information is accessible only to those who are authorized to view or use it. It involves protecting sensitive data from unauthorized access, disclosure, or interception. Measures such as encryption, access controls, and data classification help maintain confidentiality.
 
-	-Availability
-		-Availability ensures that information and resources are accessible and usable when needed by authorized users. It involves maintaining continuous and reliable access to systems, networks, and data, even in the face of disruptions or attacks. Redundancy, backups, disaster recovery plans, and fault-tolerant systems are used to maximize availability and minimize downtime.
+## Integrity
 
+- Integrity ensures that information remains accurate, complete, and trustworthy throughout its life-cycle. It involves protecting data from unauthorized modification, deletion, or corruption. Techniques such as checksum, digital signatures, and access controls help verify data integrity and prevent unauthorized changes.
 
-**Non-Repudiation**
-	-Enforcing the inability of a subject to deny that they participated in a digital transaction, agreement, contract, or communication such as an email.
-	-Non-repudiation is the property of agreeing to adhere to an obligation
-		-More specifically, it is the inability to refute responsibility.
+## Availability
+
+- Availability ensures that information and resources are accessible and usable when needed by authorized users. It involves maintaining continuous and reliable access to systems, networks, and data, even in the face of disruptions or attacks. Redundancy, backups, disaster recovery plans, and fault-tolerant systems are used to maximize availability and minimize downtime.
 
 
-**Authentication, Authorization, and Accounting**
+### Non-Repudiation
 
-	-Authentication
-		-the process of validating that an entity (user, application, or system) is who or what they claim to be
-
-	-Authorization
-		-the process of granting an authenticated entity permission to access a resource or perform a specific function
-
-	-Accounting
-		-basically, when did the entity begin, when did it end, and how long did they do it?
-
-	**Character vs Packet Mode**
-
-		-Character Mode
-			-In networking, character mode refers to a method of data transmission where individual characters or bytes are sent and received sequentially. Each character is transmitted independently, and there is no inherent structure or formatting imposed on the data stream.
-
-		-Packet Mode
-			-Packet mode, also known as packet-switched mode, is a method of data transmission where data is organized into packets before being transmitted over a network. Each packet contains both data and control information, including source and destination addresses, error checking codes, and sequencing information.
+- Enforcing the inability of a subject to deny that they participated in a digital transaction, agreement, contract, or communication such as an email.
+- Non-repudiation is the property of agreeing to adhere to an obligation
+- More specifically, it is the inability to refute responsibility.
 
 
-**Authorization Models**
-
-		-DAC (Discretionary Access Control):
-			-Discretionary Access Control grants access controls decisions to the resource owners and custodians.
-			-Each resource typically has an owner who determines the access permissions and shares. 
-			-The owner can grand or revoke access rights for other users or groups.
-			-DAC is flexible and allows owners to have fine grained control over access, but it can also result in inconsistant access control desisions.
-			-MOST PRONE TO PRIVELEGE CREEP
+# Authentication, Authorization, and Accounting
 
 
-		-RBAC (Role-based Access Control):
-			-Grants access based on predefined job role or title. 
-			-Users are assigned roles, and access rights and are associated with these roles. 
-			-Instead of directly assigning permissions to individual users, permissions are assigned to roles, and users inherit the access rights associated with their assigned roles, for example:
-				-Various Roles in a hospital or medical center
-				-Built-in roles in a database management system
-			-RBAC streamlines access control administration by grouping users with similar job functions and offering scalable approach to access management.
-			-Can be mixed with other models for ease of use
+**Authentication**
+
+- The process of validating that an entity (user, application, or system) is who or what they claim to be
+
+**Authorization**
+
+- The process of granting an authenticated entity permission to access a resource or perform a specific function
+
+**Accounting**
+
+- Basically, when did the entity begin, when did it end, and how long did they do it?
+
+## Character vs Packet Mode
+
+**Character Mode**
+
+- In networking, character mode refers to a method of data transmission where individual characters or bytes are sent and received sequentially. Each character is transmitted independently, and there is no inherent structure or formatting imposed on the data stream.
+
+**Packet Mode**
+
+- Packet mode, also known as packet-switched mode, is a method of data transmission where data is organized into packets before being transmitted over a network. Each packet contains both data and control information, including source and destination addresses, error checking codes, and sequencing information.
 
 
-		-MAC (Mandatory Access Control):
-			-A Strict mathematical model where access to resources is determined by the system based on predefined security labels and rules.
-			-Principals are assigned security clearances or classification levels (Top Secret, Secret, Confidential, Etc.)
-			-Resource objects are labeled with sensitivity levels
-			-Access is granted or denied by comparing these labels and rules, ensuring strict control and preventing unauthorized access.
-			-This is a "Non -Discretionary" model:
-				-A non-discretionary model refers to a security policy where access control decisions are determined by system administrators or security administrators rather than by individual users.
-				-In non-discretionary models, users do not have the discretion to modify or override access control settings for resources.
-				-Access decisions are typically based on predefined rules, such as security labels or classifications assigned to users and resources, rather than on user-defined permissions.
-				-This approach helps enforce strict access controls and reduces the risk of unauthorized access or data breaches.
+# Authorization Models
 
 
-		-ABAC (Attribute-based Access Control):
-			-Grants access based on a combination of characteristics associated with users, resources, and environmental conditions. 
-			-Attributes could include user attributes (Job Title, Department, Etc), Resource Attributes (Sensitivity level, classification, etc.), and environmental attributes (time fo access, location, etc.).
-			-Authorization policies are defined using these combinations, and decisions are made based on evaluating the attributes against the defined policies.
+## DAC (Discretionary Access Control):
+
+- Discretionary Access Control grants access controls decisions to the resource owners and custodians.
+- Each resource typically has an owner who determines the access permissions and shares. 
+- The owner can grand or revoke access rights for other users or groups.
+- DAC is flexible and allows owners to have fine grained control over access, but it can also result in inconsistant access control desisions.
+- MOST PRONE TO PRIVELEGE CREEP
 
 
-		-ABDAC (Attribute-based dynamic access control):
-			-Combines principals of ABDAC and DAC.
-			-Considers dynamic factors such as risk assessment, user attributes, resource attributes, and contextual information to make access control decisions in real time.
-			-ABDAC provides more fine-grained and context-aware access control needed in "zero-trust" environments when compared to other more static access control models.
-				-May include dynamic machine learning techniques such as user behavioral analytics (UBA) in next generation environments. 
+## RBAC (Role-based Access Control):
+
+- Grants access based on predefined job role or title. 
+- Users are assigned roles, and access rights and are associated with these roles. 
+- Instead of directly assigning permissions to individual users, permissions are assigned to roles, and users inherit the access rights associated with their assigned roles, for example:
+	- Various Roles in a hospital or medical center
+	- Built-in roles in a database management system
+	- RBAC streamlines access control administration by grouping users with similar job functions and offering scalable approach to access management.
+	- Can be mixed with other models for ease of use
 
 
-		-RBAC (Rule-based Access Control):
-			-Access control rules define conditions or criteria that must be met for access to be granted. 
-			-Rules can be based on several factors, such as user attributes, resource attributes, time of access, and more. 
+## MAC (Mandatory Access Control):
+
+- A Strict mathematical model where access to resources is determined by the system based on predefined security labels and rules.
+- Principals are assigned security clearances or classification levels (Top Secret, Secret, Confidential, Etc.)
+- Resource objects are labeled with sensitivity levels
+- Access is granted or denied by comparing these labels and rules, ensuring strict control and preventing unauthorized access.
+- This is a "Non -Discretionary" model:
+	- A non-discretionary model refers to a security policy where access control decisions are determined by system administrators or security administrators rather than by individual users.
+	- In non-discretionary models, users do not have the discretion to modify or override access control settings for resources.
+	- Access decisions are typically based on predefined rules, such as security labels or classifications assigned to users and resources, rather than on user-defined permissions.
+	- This approach helps enforce strict access controls and reduces the risk of unauthorized access or data breaches.
 
 
-**Control Categories**
+## ABAC (Attribute-based Access Control):
 
-	-Technical Controls: 
-		-These controls involve the use of technology to protect information systems, networks, and data. Examples include:
-			-Firewalls, encryption, access controls, antivirus software, IDS, SIEM, and SOAR.
-
-	-Managerial Controls:
-		-These controls focus on policies, procedures, and administrative measures to manage and oversee security within an organization. Examples include:
-			-Security policies, risk management processes, security training and awareness programs, and incident response plans.
-
-	-Operational Controls:
-		-These controls deal with the day-to-day operational aspects of security, including the implementation and enforcement of security policies and procedures. Examples include:
-			-Access control procedures, backup and recovery processes, change management procedures, and system monitoring.
-
-	-Physical Controls:
-		-These controls involve measures to protect physical assets, facilities, and resources from unauthorized access, damage, or theft. Examples include:
-			-Locks and keys, access control systems, surveillance cameras, perimeter fencing, and environmental controls such as fire suppression systems.
+- Grants access based on a combination of characteristics associated with users, resources, and environmental conditions. 
+- Attributes could include user attributes (Job Title, Department, Etc), Resource Attributes (Sensitivity level, classification, etc.), and environmental attributes (time fo access, location, etc.).
+- Authorization policies are defined using these combinations, and decisions are made based on evaluating the attributes against the defined policies.
 
 
-**Control Types**
-	-Preventive Controls:
-		-These controls aim to prevent security incidents from occurring by implementing measures that stop or minimize the likelihood of threats and vulnerabilities being exploited. Examples include:
-			-Firewalls, access control lists, encryption, and security awareness training.
+## ABDAC (Attribute-based dynamic access control):
 
-	-Deterrent Controls:
-		-Deterrent controls are intended to discourage potential attackers from attempting to exploit vulnerabilities by increasing the perceived risk or effort required. Examples include:
-			-Security signage, visible security cameras, and security patrols.
-
-	-Detective Controls:
-		-Detective controls are used to identify and detect security incidents or breaches after they have occurred. These controls help in monitoring and alerting security teams to abnormal or suspicious activities. Examples include:
-			-Intrusion detection systems, security logs and auditing, and security incident response teams.
-
-	-Corrective Controls:
-		-Corrective controls are implemented to mitigate the impact of security incidents and restore systems to their normal functioning state. These controls aim to address the root cause of the issue and prevent similar incidents from occurring in the future. Examples include:
-			-System backups, patch management, and incident response procedures.
-
-	-Compensating Controls:
-		-Compensating controls are alternative measures implemented to provide an equivalent level of security when primary controls cannot be implemented or are ineffective. These controls help in mitigating risks and maintaining security posture. Examples include:
-			-Multi-factor authentication, compensating controls for legacy systems, and security monitoring tools.
-
-	-Directive Controls:
-		-Directive controls establish policies, guidelines, and procedures to direct behavior and actions within an organization to ensure compliance with security objectives. These controls provide guidance on security requirements and expectations for employees and stakeholders. Examples include:
-			-Security policies, standards, and procedures, security training programs, and access control policies.
+- Combines principals of ABDAC and DAC.
+- Considers dynamic factors such as risk assessment, user attributes, resource attributes, and contextual information to make access control decisions in real time.
+- ABDAC provides more fine-grained and context-aware access control needed in "zero-trust" environments when compared to other more static access control models.
+- May include dynamic machine learning techniques such as user behavioral analytics (UBA) in next generation environments. 
 
 
-**Privilege Escalation**
-	-This is more of a phase for a multi-stage attack, not just an attack it's self. 
-	-Privilege escalation can occur during the attack, part of the kill chain, or during pen-testing
-	-Can be vertical or horizontal.
-		-APT (Advanced Persistent Threats) often attempt an escalation of access privileges soon after the initial compromise phase. 
-		-The goal is to become the root/admin user on the device
-		-Least privilege is key
-	-Having current versions of all software (OS, applications, etc) can help mitigate this.
-	-SUID (Set User ID [SUDO]) It is a special permission in Unix-like operating systems that allows users to execute a file with the permissions of the file's owner or group, rather than with the permissions of the user who is executing it.
+## RBAC (Rule-based Access Control):
+
+- Access control rules define conditions or criteria that must be met for access to be granted. 
+- Rules can be based on several factors, such as user attributes, resource attributes, time of access, and more. 
 
 
-**Cross Site Scripting (XSS)**
-	-Flaws in pages rendered by web servers and not the web server code itself (i.e. Apache, IIS) where malicious scripts or code are injected into trusted or innocent web site pages.
-
-	-Malicious scripts can steal cookies, session tokens, or other sensitive data stored by the browser and used with the site.
-
-	-Attacker typically sends browser-side scripts to end user
-
-	-Can occur anytime a web program uses user input within the output it generates without validating or encoding
-
-	-XSS Types:
-		-DOM (Document Object Model) Based XSS (Local or Type 0):
-			-In this type of XSS attack, the malicious script is injected and executed client-side by modifying the DOM  directly.
-			-Example: An attacker modifies the URL parameter `?name=<script>alert('XSS')</script>` on a vulnerable webpage. The script modifies the DOM to display an alert when the page loads, executing the attack on the user's browser.
-
-		-Reflected XSS (Non-persistent or Type 1):
-			-In a reflected XSS attack, the malicious script is embedded in a URL or input field, and the server reflects the injected script back to the user's browser without proper validation or encoding.
-			-Example: An attacker crafts a phishing email containing a link to a vulnerable website with the payload `http://vulnerable-site.com/?search=<script>alert('XSS')</script>`. When the victim clicks the link and the search parameter is reflected on the page without sanitation, the script is executed in the victim's browser.
-
-		-Stored XSS (Persistent or Type 2):
-			-Stored XSS occurs when the malicious script is permanently stored on the target server, typically in a database or user-generated content, and is then served to other users who access the affected page.
-			-Example: An attacker posts a malicious script as a comment on a blog or forum, such as `<script>alert('XSS')</script>`. When other users visit the page containing the comment, the script executes in their browsers, potentially compromising their accounts or stealing sensitive information.
+# Control Categories
 
 
-**Request Forgery (CSRF/XSRF)**
-	-Attack forces an end user to perform undesirable actions in a web application in which they are authenticated
-	-An effective CSRF/XSRF attack can force users to perform state-changing requests such as:
-		-Transferring Funds
-		-Changing their E-Mail address
-		-Changing their password
-	-If a victim is an admin account, the CSRF attack can compromise the entire web application. 
+## Technical Controls:
+
+- These controls involve the use of technology to protect information systems, networks, and data. Examples include:
+	- Firewalls, encryption, access controls, antivirus software, IDS, SIEM, and SOAR.
+
+## Managerial Controls: 
+
+- These controls focus on policies, procedures, and administrative measures to manage and oversee security within an organization. Examples include:
+	- Security policies, risk management processes, security training and awareness programs, and incident response plans.
+
+## Operational Controls:
+
+- These controls deal with the day-to-day operational aspects of security, including the implementation and enforcement of security policies and procedures. Examples include:
+	- Access control procedures, backup and recovery processes, change management procedures, and system monitoring.
+
+## Physical Controls:
+
+- These controls involve measures to protect physical assets, facilities, and resources from unauthorized access, damage, or theft. Examples include:
+	- Locks and keys, access control systems, surveillance cameras, perimeter fencing, and environmental controls such as fire suppression systems.
+
+
+# Control Types
+
+
+## Preventive Controls:
+
+- These controls aim to prevent security incidents from occurring by implementing measures that stop or minimize the likelihood of threats and vulnerabilities being exploited. Examples include:
+	- Firewalls, access control lists, encryption, and security awareness training.
+
+## Deterrent Controls:
+
+- Deterrent controls are intended to discourage potential attackers from attempting to exploit vulnerabilities by increasing the perceived risk or effort required. Examples include:
+	- Security signage, visible security cameras, and security patrols.
+
+## Detective Controls:
+
+- Detective controls are used to identify and detect security incidents or breaches after they have occurred. These controls help in monitoring and alerting security teams to abnormal or suspicious activities. Examples include:
+	- Intrusion detection systems, security logs and auditing, and security incident response teams.
+
+## Corrective Controls:
+
+- Corrective controls are implemented to mitigate the impact of security incidents and restore systems to their normal functioning state. These controls aim to address the root cause of the issue and prevent similar incidents from occurring in the future. Examples include:
+	- System backups, patch management, and incident response procedures.
+
+## Compensating Controls:
+
+- Compensating controls are alternative measures implemented to provide an equivalent level of security when primary controls cannot be implemented or are ineffective. These controls help in mitigating risks and maintaining security posture. Examples include:
+	- Multi-factor authentication, compensating controls for legacy systems, and security monitoring tools.
+
+## Directive Controls:
+
+- Directive controls establish policies, guidelines, and procedures to direct behavior and actions within an organization to ensure compliance with security objectives. These controls provide guidance on security requirements and expectations for employees and stakeholders. Examples include:
+	- Security policies, standards, and procedures, security training programs, and access control policies.
+
+
+# Privilege Escalation
+
+
+- This is more of a phase for a multi-stage attack, not just an attack it's self. 
+- Privilege escalation can occur during the attack, part of the kill chain, or during pen-testing
+- Can be vertical or horizontal.
+- APT (Advanced Persistent Threats) often attempt an escalation of access privileges soon after the initial compromise phase. 
+- The goal is to become the root/admin user on the device
+- Least privilege is key
+- Having current versions of all software (OS, applications, etc) can help mitigate this.
+- SUID (Set User ID [SUDO]) It is a special permission in Unix-like operating systems that allows users to execute a file with the permissions of the file's owner or group, rather than with the permissions of the user who is executing it.
+
+
+# Cross Site Scripting (XSS)
+
+
+- Flaws in pages rendered by web servers and not the web server code itself (i.e. Apache, IIS) where malicious scripts or code are injected into trusted or innocent web site pages.
+- Malicious scripts can steal cookies, session tokens, or other sensitive data stored by the browser and used with the site.
+- Attacker typically sends browser-side scripts to end user
+- Can occur anytime a web program uses user input within the output it generates without validating or encoding
+
+## XSS Types:
+
+### DOM (Document Object Model) Based XSS (Local or Type 0):
+
+- In this type of XSS attack, the malicious script is injected and executed client-side by modifying the DOM  directly.
+	- Example: An attacker modifies the URL parameter `?name=<script>alert('XSS')</script>` on a vulnerable webpage. The script modifies the DOM to display an alert when the page loads, executing the attack on the user's browser.
+
+### Reflected XSS (Non-persistent or Type 1):
+
+- In a reflected XSS attack, the malicious script is embedded in a URL or input field, and the server reflects the injected script back to the user's browser without proper validation or encoding.
+	- Example: An attacker crafts a phishing email containing a link to a vulnerable website with the payload `http://vulnerable-site.com/?search=<script>alert('XSS')</script>`. When the victim clicks the link and the search parameter is reflected on the page without sanitation, the script is executed in the victim's browser.
+
+### Stored XSS (Persistent or Type 2):
+
+- Stored XSS occurs when the malicious script is permanently stored on the target server, typically in a database or user-generated content, and is then served to other users who access the affected page.
+	- Example: An attacker posts a malicious script as a comment on a blog or forum, such as `<script>alert('XSS')</script>`. When other users visit the page containing the comment, the script executes in their browsers, potentially compromising their accounts or stealing sensitive information.
+
+
+## Request Forgery (CSRF/XSRF)
+
+- Attack forces an end user to perform undesirable actions in a web application in which they are authenticated
+	- An effective CSRF/XSRF attack can force users to perform state-changing requests such as:
+		- Transferring Funds
+		- Changing their E-Mail address
+		- Changing their password
+- If a victim is an admin account, the CSRF attack can compromise the entire web application. 
 
 
 
