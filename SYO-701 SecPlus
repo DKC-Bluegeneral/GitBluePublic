@@ -440,7 +440,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 	- This HTTP exploit allows and attacker to access restricted files, directories, and commands located outside of the root directory
 	- Attackers can modify a URI or URL to force the web server into exposing the restricted files.
 	- Examples Include:
-		![Example](Dir-Transversal-Example-1.png)
+		![Example](https://raw.githubusercontent.com/DKC-Bluegeneral/Notes/main/Images/Dir-Transversal-Example-1.png)
 
  - Buffer and integer overflows
 
