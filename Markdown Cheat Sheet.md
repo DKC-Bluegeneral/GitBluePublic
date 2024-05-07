@@ -10,7 +10,7 @@
 
 1. Ordered List
 2. Things go here
-3. And here of coarse! 
+3. And here too! 
 
 - This is an
 - Unordered list
