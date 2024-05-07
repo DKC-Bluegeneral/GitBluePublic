@@ -1,4 +1,4 @@
-#Gap Analysis#
+**Gap Analysis**
 	-Know where you are, and where you need to go.
 	-Common gaps:
 		-Weak credentials or shared credentials
@@ -60,7 +60,7 @@ The PA communicates with the PEP when creating the communication path via the co
 		-the process of validating that an entity (user, application, or system) is who or what they claim to be
 
 	-Authorization
-		-the process of granting an authenticated entity permission to acccess a resource or perform a specific function
+		-the process of granting an authenticated entity permission to access a resource or perform a specific function
 
 	-Accounting
 		-basically, when did the entity begin, when did it end, and how long did they do it?
@@ -210,6 +210,7 @@ The PA communicates with the PEP when creating the communication path via the co
 		-Changing their E-Mail address
 		-Changing their password
 	-If a victim is an admin account, the CSRF attack can compromise the entire web application. 
+
 
 
 	
