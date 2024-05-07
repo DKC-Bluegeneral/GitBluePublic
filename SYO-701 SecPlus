@@ -1,11 +1,50 @@
+#Gap Analysis#
+	-Know where you are, and where you need to go.
+	-Common gaps:
+		-Weak credentials or shared credentials
+		-Lack of tested patch management
+		-Violation of least privilege principle
+		-Having no/unenforced acceptable use policies
+		-Poor physical security
+		-Configuration and deployment errors due to lack of change and configuration management
+		-Poor visibility and lack of proper auditing
+
+
+**Zero trust control plane**
+	-Zero Trust (ZT):
+
+ZT assumes there is no implicit trust granted to assets to user accounts based solely on their physical or network location based on asset ownership. 
+
+Segregation of duties and high visibility are also emphasized 
+
+Adaptive identity is another key ZT component. It’s also called adaptive authentication, or risk based authentication. It is  a method of access to data that matches user credentials with the risk of the requested authorization. 
+
+Zero Trust Control Plane is separate from the data plane, and contains the policy decision point (PDP), which includes:
+The Policy engine (PE), which uses the enterprise policy-driven access control panel (as well as input from external sources) to grant, deny, or revoke access to resources. 
+The policy administrator (PA) which enables or shuts down the communication path between subject and a resource  via commands to associated policy enforcement points (PEPs)
+
+The PA communicates with the PEP when creating the communication path via the control plane. 
+
+
+
+
+
+##Add Previous notes above this text------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 **CIA Triad**
 	-Confidentiality
 		-Confidentiality ensures that information is accessible only to those who are authorized to view or use it. It involves protecting sensitive data from unauthorized access, disclosure, or interception. Measures such as encryption, access controls, and data classification help maintain confidentiality.
 
 	-Integrity
-		-Integrity ensures that information remains accurate, complete, and trustworthy throughout its lifecycle. It involves protecting data from unauthorized modification, deletion, or corruption. Techniques such as checksums, digital signatures, and access controls help verify data integrity and prevent unauthorized changes.
+		-Integrity ensures that information remains accurate, complete, and trustworthy throughout its life-cycle. It involves protecting data from unauthorized modification, deletion, or corruption. Techniques such as checksum, digital signatures, and access controls help verify data integrity and prevent unauthorized changes.
 
-	-Avaliability
+	-Availability
 		-Availability ensures that information and resources are accessible and usable when needed by authorized users. It involves maintaining continuous and reliable access to systems, networks, and data, even in the face of disruptions or attacks. Redundancy, backups, disaster recovery plans, and fault-tolerant systems are used to maximize availability and minimize downtime.
 
 
@@ -51,7 +90,7 @@
 			-Instead of directly assigning permissions to individual users, permissions are assigned to roles, and users inherit the access rights associated with their assigned roles, for example:
 				-Various Roles in a hospital or medical center
 				-Built-in roles in a database management system
-			-RBAC streamlines access control administration by grouping users with similar job functions and offering scalable approach to access managment.
+			-RBAC streamlines access control administration by grouping users with similar job functions and offering scalable approach to access management.
 			-Can be mixed with other models for ease of use
 
 
@@ -68,16 +107,16 @@
 
 
 		-ABAC (Attribute-based Access Control):
-			-Grants access based on a combination of characteristics associated with users, resources, and enviromental conditions. 
-			-Attributes could include user attributes (Job Title, Department, Etc), Resource Attributes (Sensitivity level, classification, etc.), and enviromental attributes (time fo access, location, etc.).
-			-Authorization policies are defined using these combinations, and decisiona are made based on evaluating the attributes against the defined policies.
+			-Grants access based on a combination of characteristics associated with users, resources, and environmental conditions. 
+			-Attributes could include user attributes (Job Title, Department, Etc), Resource Attributes (Sensitivity level, classification, etc.), and environmental attributes (time fo access, location, etc.).
+			-Authorization policies are defined using these combinations, and decisions are made based on evaluating the attributes against the defined policies.
 
 
 		-ABDAC (Attribute-based dynamic access control):
 			-Combines principals of ABDAC and DAC.
 			-Considers dynamic factors such as risk assessment, user attributes, resource attributes, and contextual information to make access control decisions in real time.
-			-ABDAC provides more fine-grained and context-aware access control needed in "zero-trust" enviroments when compared to other more static access control models.
-				-May include dynamic machine learning techniques such as user behavioral analytics (UBA) in next generation enviroments. 
+			-ABDAC provides more fine-grained and context-aware access control needed in "zero-trust" environments when compared to other more static access control models.
+				-May include dynamic machine learning techniques such as user behavioral analytics (UBA) in next generation environments. 
 
 
 		-RBAC (Rule-based Access Control):
@@ -130,13 +169,13 @@
 			-Security policies, standards, and procedures, security training programs, and access control policies.
 
 
-**Privelege Escilation**
+**Privilege Escalation**
 	-This is more of a phase for a multi-stage attack, not just an attack it's self. 
-	-Privelege escilation can occur during the attack, part of the kill chain, or during pen-testing
+	-Privilege escalation can occur during the attack, part of the kill chain, or during pen-testing
 	-Can be vertical or horizontal.
-		-APT (Advanced Persistant Threats) often attempt an escilation of access priveleges soon after the initial compromise phase. 
+		-APT (Advanced Persistent Threats) often attempt an escalation of access privileges soon after the initial compromise phase. 
 		-The goal is to become the root/admin user on the device
-		-Least privelege is key
+		-Least privilege is key
 	-Having current versions of all software (OS, applications, etc) can help mitigate this.
 	-SUID (Set User ID [SUDO]) It is a special permission in Unix-like operating systems that allows users to execute a file with the permissions of the file's owner or group, rather than with the permissions of the user who is executing it.
 
@@ -148,26 +187,29 @@
 
 	-Attacker typically sends browser-side scripts to end user
 
-	-Can occur anytime a web program uses user imput within the output it generates without validating or encoding
+	-Can occur anytime a web program uses user input within the output it generates without validating or encoding
 
 	-XSS Types:
 		-DOM (Document Object Model) Based XSS (Local or Type 0):
 			-In this type of XSS attack, the malicious script is injected and executed client-side by modifying the DOM  directly.
 			-Example: An attacker modifies the URL parameter `?name=<script>alert('XSS')</script>` on a vulnerable webpage. The script modifies the DOM to display an alert when the page loads, executing the attack on the user's browser.
 
-		-Reflected XSS (Nonpersistant or Type 1):
+		-Reflected XSS (Non-persistent or Type 1):
 			-In a reflected XSS attack, the malicious script is embedded in a URL or input field, and the server reflects the injected script back to the user's browser without proper validation or encoding.
-			-Example: An attacker crafts a phishing email containing a link to a vulnerable website with the payload `http://vulnerable-site.com/?search=<script>alert('XSS')</script>`. When the victim clicks the link and the search parameter is reflected on the page without sanitization, the script is executed in the victim's browser.
+			-Example: An attacker crafts a phishing email containing a link to a vulnerable website with the payload `http://vulnerable-site.com/?search=<script>alert('XSS')</script>`. When the victim clicks the link and the search parameter is reflected on the page without sanitation, the script is executed in the victim's browser.
 
-		-Stored XSS (Persistant or Type 2):
+		-Stored XSS (Persistent or Type 2):
 			-Stored XSS occurs when the malicious script is permanently stored on the target server, typically in a database or user-generated content, and is then served to other users who access the affected page.
 			-Example: An attacker posts a malicious script as a comment on a blog or forum, such as `<script>alert('XSS')</script>`. When other users visit the page containing the comment, the script executes in their browsers, potentially compromising their accounts or stealing sensitive information.
 
 
 **Request Forgery (CSRF/XSRF)**
 	-Attack forces an end user to perform undesirable actions in a web application in which they are authenticated
-	-An effective CSRF/XSRF attack can force users to perform state-changing requsts such as:
+	-An effective CSRF/XSRF attack can force users to perform state-changing requests such as:
 		-Transferring Funds
 		-Changing their E-Mail address
 		-Changing their password
 	-If a victim is an admin account, the CSRF attack can compromise the entire web application. 
+
+
+	
