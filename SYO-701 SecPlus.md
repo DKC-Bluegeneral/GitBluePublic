@@ -770,6 +770,18 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 
-- **MITM**
+## MITM
 
-	- A Man in the middle can be a good (Proxy, ALG, Translators) or it can be dangerous (Proxy ARP, DHCP Spoofing)
+
+- A Man in the middle can be a good (Proxy, ALG, Translators) or it can be dangerous (Proxy ARP, DHCP Spoofing)
+
+- A system with the ability to view the communication between two (or more) hosts (frames, packets) injects itself in the path between host systems
+
+- They are complex attacks that ban be simplex or duplex at different layers of the OSI model.
+
+
+## Man-in-the-Browser Attack
+
+- Man-in-the-Browser attack uses the saem tactics as the MITM except that a Trojan horse is used to capture and manipulate calls between the main browser and its security mechanisms (or libraries) on an ad-hoc basis. 
+
+- The most common usage is financial fraud, which manipulates transactions of Internet 
