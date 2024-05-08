@@ -439,13 +439,41 @@ The policy administrator (PA) which enables or shuts down the communication path
 	- Also known as a path transversal attack or a "Dot Slash" and is most often launched through a web browser and other clients.
 	- This HTTP exploit allows and attacker to access restricted files, directories, and commands located outside of the root directory
 	- Attackers can modify a URI or URL to force the web server into exposing the restricted files.
-	- Examples Include:
-		![Example](https://raw.githubusercontent.com/DKC-Bluegeneral/Notes/main/Images/Dir-Transversal-Example-1.png)
+		- Examples Include:
+			![Example 1](https://raw.githubusercontent.com/DKC-Bluegeneral/Notes/main/Images/Dir-Transversal-Example-1.png)
 
- - Buffer and integer overflows
+- Buffer and Integer overflows
+
+	**Buffer Overflows**
+		- Attacker Sends larger than expected input, for example when a server accepts it and writes to memory areas.
+		- Associated buffers are filled and adjacent memory is overwritten as a result.
+		- This everwrite may contain instructions or code that crashes the server resulting in a DoS.
+
+	**Integer Overflows**
+		- A Type of an arthmetic overflow error when the result of an integer operation does not fit  within the allocated memory space.
+		- Instead of an error in the program, it usually causes the result to be unexpected.
+		- These are in the top 10 of the most dangerous software errors, mostly because they often lead to buffer overflows.
 
 - Race Conditions - time of check/time of use
 
+	**Race Condition**
+		- A race condition is when a system or software trise to do two or more things simultaneously, but due to the type of system, the operations must be done in the correct sequence in order or function properly.
+		- Race conditions are classically related to synchronization errors in software code.
+		- Crackers can leverage a known race condition vulnerability to get unauthorized access to a system or network.
+	**Time-Of-Check vs. Time-Of-Use (TOC/TOU)**
+		- A time-of-check vs time-of-use attack is a race condition and occurs when an attacker tries to gain privelege to a system by "racing" it to a resource it is attempting to access.
+		- The types of programming flaws that allow for race conditions occur when the system (or application) splits up the operations of verifying credentials and providing access to a resource.
+		- It can do things such as replacing a config.sys file with a different file that compromises the system before the system even loads it's operating system.
+
 - Improper error handling
+	- Poorly defined validation rules used in verifying the correctness, completeness, and acceptability of input data.
+	- Software applications and web servers are notorious
+	- Must establish data input, data flow, and data output requirements with a designed security features in mind.
+	- Collusions are in this category when the chance that two unique inputs will produce the same output (MD5 and SHA-1 are vulnerable)
 
 - Session replay attacks
+	- Often part of MITM attacks.
+		- Examples include:
+			- An attacker steals an ID of a user and reuses it to impersonate an authorized user.
+			- Web applications that allow reusing old session ID's or session credentials for authorization are also vulnerable to these attacks.
+	- IPsec (Internet Protocol Security) and TLS (Transport Layer Security) have anti-replay mechanisms to protect secure session. 
