@@ -1,8 +1,7 @@
-<div style="width:20%; margin: auto;">
+<p align="center">
+  <img src="https://github.com/DKC-Bluegeneral/GitBluePublic/blob/main/Images/black%20-mage.png" alt="DKC-Bluegeneral">
+</p>
 
-![Bluegeneral](https://github.com/DKC-Bluegeneral/GitBluePublic/blob/main/Images/black%20-mage.png)
-
-</div>
 
 
 # Welcome!
