@@ -596,3 +596,19 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 
+- A Common vector is the hardware drivers that we install in our operating systems
+
+- This is priveleged code that is trusted by the OS
+
+- Can be trojans, RATs, or hacked driver software
+
+
+## Shimming
+
+
+- Shimming is the process of stealing information and money from Point-of-Sale (POS) systems, credit card readers, and ATM machines.
+
+- The attack is common at gas stations, convienence stores, and kiosks.
+
+- It can be an overlay attachment or sometimes and entirely replaced device.
+
