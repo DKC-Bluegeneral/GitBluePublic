@@ -612,3 +612,39 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - It can be an overlay attachment or sometimes and entirely replaced device.
 
+	![Example2](https://github.com/DKC-Bluegeneral/Notes/blob/main/Images/ATM-Skimmer-Example-2.png)
+
+
+## Refactoring
+
+- Involves changing an applications source code without modifying the characteristics.
+
+	- Often used to introduce legacy applications into new computer systems and devices. 
+
+	- Can also re-engineer classic attack code to create variants, hybrid viruses, and worms. 
+
+
+
+
+# Wireless Attacks
+
+
+
+
+
+## Common Wireless Attacks
+
+
+- Most malware attacks are multi-phased, stealthy, and polymorphic. Below is a list of some common wireless attacks:
+
+
+	- Evil Twins
+	- Rogue AP
+	- Disassociation
+	- Jamming
+	- Weak IV
+	- WPA3 attack
+	- Bluesnarfing
+	- Bluejacking
+	- RFID
+	- NFC
