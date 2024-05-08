@@ -395,7 +395,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 - If a victim is an admin account, the CSRF attack can compromise the entire web application. 
 
 
-## Injection Attacks
+# Injection Attacks
 
 
 - Often a result of MITM (Man in the middle) or RAT (Remote Access Tool).
@@ -444,7 +444,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 - Performs unauthorized tasks or accessable data. 
 
 
-## Coding Attacks
+# Coding Attacks
 
 
 - **Pointer/object dereference**
@@ -483,29 +483,29 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - **Integer Overflows**
 
-		- A Type of an arthmetic overflow error when the result of an integer operation does not fit  within the allocated memory space.
+	- A Type of an arthmetic overflow error when the result of an integer operation does not fit  within the allocated memory space.
 
-		- Instead of an error in the program, it usually causes the result to be unexpected.
+	- Instead of an error in the program, it usually causes the result to be unexpected.
 
-		- These are in the top 10 of the most dangerous software errors, mostly because they often lead to buffer overflows.
+	- These are in the top 10 of the most dangerous software errors, mostly because they often lead to buffer overflows.
 
-- Race Conditions - time of check/time of use
+## Race Conditions - time of check/time of use
 
-	- **Race Condition**
+- **Race Condition**
 
-		- A race condition is when a system or software trise to do two or more things simultaneously, but due to the type of system, the operations must be done in the correct sequence in order or function properly.
+	- A race condition is when a system or software trise to do two or more things simultaneously, but due to the type of system, the operations must be done in the correct sequence in order or function properly.
 
-		- Race conditions are classically related to synchronization errors in software code.
+	- Race conditions are classically related to synchronization errors in software code.
 
-		- Crackers can leverage a known race condition vulnerability to get unauthorized access to a system or network.
+	- Crackers can leverage a known race condition vulnerability to get unauthorized access to a system or network.
 
-	- **Time-Of-Check vs. Time-Of-Use (TOC/TOU)**
+- **Time-Of-Check vs. Time-Of-Use (TOC/TOU)**
 
-		- A time-of-check vs time-of-use attack is a race condition and occurs when an attacker tries to gain privelege to a system by "racing" it to a resource it is attempting to access.
+	- A time-of-check vs time-of-use attack is a race condition and occurs when an attacker tries to gain privelege to a system by "racing" it to a resource it is attempting to access.
 
-		- The types of programming flaws that allow for race conditions occur when the system (or application) splits up the operations of verifying credentials and providing access to a resource.
+	- The types of programming flaws that allow for race conditions occur when the system (or application) splits up the operations of verifying credentials and providing access to a resource.
 
-		- It can do things such as replacing a config.sys file with a different file that compromises the system before the system even loads it's operating system.
+	- It can do things such as replacing a config.sys file with a different file that compromises the system before the system even loads it's operating system.
 
 - Improper error handling
 
