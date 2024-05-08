@@ -3,11 +3,9 @@
 
 
 
-
-![CompTIALogo](https://github.com/DKC-Bluegeneral/Notes/blob/main/Images/CompTIASecPlus.jpeg)
-
-
-
+<p align="center">
+  <img src="https://github.com/DKC-Bluegeneral/Notes/blob/main/Images/CompTIASecPlus.jpeg" alt="DKC-Bluegeneral">
+</p>
 
 
 

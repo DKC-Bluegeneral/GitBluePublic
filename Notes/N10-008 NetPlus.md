@@ -2,11 +2,9 @@
 
 
 
-
-
-![A+](https://github.com/DKC-Bluegeneral/Notes/blob/main/Images/CompTIA_Network_2Bce.png)
-
-
+<p align="center">
+  <img src="https://github.com/DKC-Bluegeneral/Notes/blob/main/Images/CompTIA_Network_2Bce.png" alt="DKC-Bluegeneral">
+</p>
 
 
 

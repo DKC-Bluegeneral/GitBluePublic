@@ -3,13 +3,9 @@
 
 
 
-
-![AzureFundementals](https://github.com/DKC-Bluegeneral/Notes/blob/main/Images/AzureFundementals.png)
-
-
-
-
-
+<p align="center">
+  <img src="https://github.com/DKC-Bluegeneral/Notes/blob/main/Images/AzureFundementals.png" alt="DKC-Bluegeneral">
+</p>
 
 
 
