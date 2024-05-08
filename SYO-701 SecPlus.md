@@ -430,50 +430,145 @@ The policy administrator (PA) which enables or shuts down the communication path
 ## Coding Attacks
 
 - Pointer/object dereference
+
 	- An attacker can supply a pointer for memory locations that the program is not expecting
+
 	- A Null-pointer dereference occurs when a pointer with a value of NULL is used as if it actually points to a valid memory area
+
 	- A program can possibly dereference a null pointer, and in doing so, raise a NullPointerException
+
 	- Null pointer errors are frequently the result of one or more programmer assumptions being violated. 
 
 - Directory Traversal
+
 	- Also known as a path transversal attack or a "Dot Slash" and is most often launched through a web browser and other clients.
+
 	- This HTTP exploit allows and attacker to access restricted files, directories, and commands located outside of the root directory
+
 	- Attackers can modify a URI or URL to force the web server into exposing the restricted files.
+
 		- Examples Include:
+
 			![Example 1](https://raw.githubusercontent.com/DKC-Bluegeneral/Notes/main/Images/Dir-Transversal-Example-1.png)
 
 - Buffer and Integer overflows
 
 	**Buffer Overflows**
+
 		- Attacker Sends larger than expected input, for example when a server accepts it and writes to memory areas.
+
 		- Associated buffers are filled and adjacent memory is overwritten as a result.
+
 		- This everwrite may contain instructions or code that crashes the server resulting in a DoS.
 
 	**Integer Overflows**
+
 		- A Type of an arthmetic overflow error when the result of an integer operation does not fit  within the allocated memory space.
+
 		- Instead of an error in the program, it usually causes the result to be unexpected.
+
 		- These are in the top 10 of the most dangerous software errors, mostly because they often lead to buffer overflows.
 
 - Race Conditions - time of check/time of use
 
 	**Race Condition**
+
 		- A race condition is when a system or software trise to do two or more things simultaneously, but due to the type of system, the operations must be done in the correct sequence in order or function properly.
+
 		- Race conditions are classically related to synchronization errors in software code.
+
 		- Crackers can leverage a known race condition vulnerability to get unauthorized access to a system or network.
+
 	**Time-Of-Check vs. Time-Of-Use (TOC/TOU)**
+
 		- A time-of-check vs time-of-use attack is a race condition and occurs when an attacker tries to gain privelege to a system by "racing" it to a resource it is attempting to access.
+
 		- The types of programming flaws that allow for race conditions occur when the system (or application) splits up the operations of verifying credentials and providing access to a resource.
+
 		- It can do things such as replacing a config.sys file with a different file that compromises the system before the system even loads it's operating system.
 
 - Improper error handling
+
 	- Poorly defined validation rules used in verifying the correctness, completeness, and acceptability of input data.
+
 	- Software applications and web servers are notorious
+
 	- Must establish data input, data flow, and data output requirements with a designed security features in mind.
+
 	- Collusions are in this category when the chance that two unique inputs will produce the same output (MD5 and SHA-1 are vulnerable)
 
 - Session replay attacks
+
 	- Often part of MITM attacks.
+
 		- Examples include:
+
 			- An attacker steals an ID of a user and reuses it to impersonate an authorized user.
+
 			- Web applications that allow reusing old session ID's or session credentials for authorization are also vulnerable to these attacks.
-	- IPsec (Internet Protocol Security) and TLS (Transport Layer Security) have anti-replay mechanisms to protect secure session. 
+
+	- IPsec (Internet Protocol Security) and TLS (Transport Layer Security) have anti-replay mechanisms to protect secure session.
+
+
+
+
+
+# API Attacks
+
+
+
+
+- Application Programming Interface Attacks:
+
+	- An API DDoS attack often involces sending traffic from many clients to overwhelm the API service
+
+	- Even if rate limiting controls are in place to prevent servers from crashing, they cannon always prevent service disruption and severe degradation of the API's user expierence.
+
+	- If API calls are not digitally signed or if they have embeded credentials, they can be compromised.
+
+
+## API Attack Vectors
+
+- Login Attacks
+
+	- Login attacks involve attempting to gain unauthorized access to an application or system by exploiting weaknesses in the authentication mechanism. This may include brute-force attacks, credential stuffing, or phishing attacks targeting user credentials.
+
+- DDoS Attacks
+
+	- DDoS (Distributed Denial of Service) attacks aim to disrupt the normal operation of an application or service by overwhelming it with a large volume of traffic from multiple sources. This flood of traffic consumes the target's resources, making it inaccessible to legitimate users.
+
+- Leverage Credentials
+
+	- Attackers may leverage stolen or compromised credentials to gain unauthorized access to an application or system. This could involve using leaked credentials obtained from data breaches or phishing attacks to impersonate legitimate users and access sensitive information or perform malicious actions.
+
+- MITM (Man in the Middle)
+
+	- MITM attacks involve intercepting and potentially modifying communication between two parties without their knowledge or consent. In the context of APIs, MITM attacks may target the communication between clients and servers, allowing attackers to eavesdrop on sensitive data or manipulate the transmitted messages.
+
+
+
+
+
+# SSL Striping and Pass the Hash
+
+
+
+
+
+## Pass the Hash
+
+- Example:
+
+	- Let's say an attacker gains access to a system and retrieves the hashed password of a privileged user. Instead of cracking the hash to obtain the plaintext password, the attacker can use the hashed password directly to authenticate to other systems where the same password is used. By passing the hashed password, the attacker can potentially gain unauthorized access to additional systems within the network without needing the actual password. This method bypasses traditional authentication mechanisms that rely on verifying plaintext passwords, making it a powerful technique for attackers to escalate their privileges and move laterally within the network.
+
+	- On Windows networks, hackers do not need the plaintext passwords to access certian services.
+
+	- Sometimes the authentication process relies on the passwords cryptographic hash and there are various tools to extract these hashes (Cain) from compromised Windows machines (Lately Windows 10) and use them to access other services.
+
+	- This technique is known as pass the hash and is one of the attacks that windows Virtual Secure Module (VSM) was intended to protect against.
+
+- By definition a Pass the Hash is a vulnerability of Windows Safe Mode.
+	- It is an OS diagnostic mode of peration that has been around since windows 95
+	- It can be initiated at the boot time and only loads the nominal set of drivers and services that windows needs to run. 
+	- Most third-party security products do not start up in safe mode so the protection is negated. 
+
