@@ -1,6 +1,8 @@
+<div style="width:20%; margin: auto;">
+
 ![Bluegeneral](https://github.com/DKC-Bluegeneral/GitBluePublic/blob/main/Images/black%20-mage.png)
 
-
+</div>
 
 
 # Welcome!
