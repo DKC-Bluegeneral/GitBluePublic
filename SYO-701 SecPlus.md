@@ -888,32 +888,32 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 1. **TCP Handshake:**
 
-- Initiated by the client sending a SYN (Synchronize) packet to the server.
+	- Initiated by the client sending a SYN (Synchronize) packet to the server.
 
-- Server responds with a SYN-ACK (Synchronize-Acknowledgment) packet to acknowledge the SYN.
+	- Server responds with a SYN-ACK (Synchronize-Acknowledgment) packet to acknowledge the SYN.
 
-- Client acknowledges the server's response with an ACK (Acknowledgment) packet.
+	- Client acknowledges the server's response with an ACK (Acknowledgment) packet.
 
-	> SYN - SYN-ACK - ACK
+		> SYN - SYN-ACK - ACK
 
 
 2. **Data Transfer:**
 
 
-- After the handshake, data transmission occurs bidirectionally between the client and server.
+	- After the handshake, data transmission occurs bidirectionally between the client and server.
 
-- Both parties can send and receive data packets.
+	- Both parties can send and receive data packets.
 
 3. **Connection Termination:**
 
 
-- Either party can initiate the connection termination process.
+	- Either party can initiate the connection termination process.
 
-- The party initiating termination sends a FIN (Finish) packet.
+	- The party initiating termination sends a FIN (Finish) packet.
 
-- The other party responds with an ACK packet to acknowledge the termination request.
+	- The other party responds with an ACK packet to acknowledge the termination request.
 
-- Finally, the party acknowledging the termination sends its own FIN packet.
+	- Finally, the party acknowledging the termination sends its own FIN packet.
 
-- Upon receiving the final FIN packet, both sides complete the connection termination.
+	- Upon receiving the final FIN packet, both sides complete the connection termination.
 
