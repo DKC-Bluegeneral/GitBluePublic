@@ -44,7 +44,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 
-## Add Previous notes above this text------------------------------------------------------------------------------------------
+-------------------------------------------------------------Add Previous notes above this text------------------------------------------------------------------------------------------
 
 
 
@@ -340,33 +340,37 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 
+- **XSS**
 
-- Flaws in pages rendered by web servers and not the web server code itself (i.e. Apache, IIS) where malicious scripts or code are injected into trusted or innocent web site pages.
+	- Flaws in pages rendered by web servers and not the web server code itself (i.e. Apache, IIS) where malicious scripts or code are injected into trusted or innocent web site pages.
 
-- Malicious scripts can steal cookies, session tokens, or other sensitive data stored by the browser and used with the site.
+	- Malicious scripts can steal cookies, session tokens, or other sensitive data stored by the browser and used with the site.
 
-- Attacker typically sends browser-side scripts to end user.
+	- Attacker typically sends browser-side scripts to end user.
 
-- Can occur anytime a web program uses user input within the output it generates without validating or encoding.
+	- Can occur anytime a web program uses user input within the output it generates without validating or encoding.
 
 
 ## XSS Types:
 
 
-### DOM (Document Object Model) Based XSS (Local or Type 0):
+- **DOM (Document Object Model) Based XSS (Local or Type 0):**
 
-- In this type of XSS attack, the malicious script is injected and executed client-side by modifying the DOM  directly.
-	- Example: An attacker modifies the URL parameter `?name=<script>alert('XSS')</script>` on a vulnerable webpage. The script modifies the DOM to display an alert when the page loads, executing the attack on the user's browser.
+	- In this type of XSS attack, the malicious script is injected and executed client-side by modifying the DOM  directly.
 
-### Reflected XSS (Non-persistent or Type 1):
+		- Example: An attacker modifies the URL parameter `?name=<script>alert('XSS')</script>` on a vulnerable webpage. The script modifies the DOM to display an alert when the page loads, executing the attack on the user's browser.
 
-- In a reflected XSS attack, the malicious script is embedded in a URL or input field, and the server reflects the injected script back to the user's browser without proper validation or encoding.
-	- Example: An attacker crafts a phishing email containing a link to a vulnerable website with the payload `http://vulnerable-site.com/?search=<script>alert('XSS')</script>`. When the victim clicks the link and the search parameter is reflected on the page without sanitation, the script is executed in the victim's browser.
+- **Reflected XSS (Non-persistent or Type 1):**
 
-### Stored XSS (Persistent or Type 2):
+	- In a reflected XSS attack, the malicious script is embedded in a URL or input field, and the server reflects the injected script back to the user's browser without proper validation or encoding.
 
-- Stored XSS occurs when the malicious script is permanently stored on the target server, typically in a database or user-generated content, and is then served to other users who access the affected page.
-	- Example: An attacker posts a malicious script as a comment on a blog or forum, such as `<script>alert('XSS')</script>`. When other users visit the page containing the comment, the script executes in their browsers, potentially compromising their accounts or stealing sensitive information.
+		- Example: An attacker crafts a phishing email containing a link to a vulnerable website with the payload `http://vulnerable-site.com/?search=<script>alert('XSS')</script>`. When the victim clicks the link and the search parameter is reflected on the page without sanitation, the script is executed in the victim's browser.
+
+- **Stored XSS (Persistent or Type 2):**
+
+	- Stored XSS occurs when the malicious script is permanently stored on the target server, typically in a database or user-generated content, and is then served to other users who access the affected page.
+
+		- Example: An attacker posts a malicious script as a comment on a blog or forum, such as `<script>alert('XSS')</script>`. When other users visit the page containing the comment, the script executes in their browsers, potentially compromising their accounts or stealing sensitive information.
 
 
 ## Request Forgery (CSRF/XSRF)
@@ -415,7 +419,9 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - The attacks can render sensitive user information or change information in the LDAP directory. 
 
+
 ## XML Injection
+
 
 - Also known as "SOAP Injection"
 
@@ -427,9 +433,11 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - Performs unauthorized tasks or accessable data. 
 
+
 ## Coding Attacks
 
-- Pointer/object dereference
+
+- **Pointer/object dereference**
 
 	- An attacker can supply a pointer for memory locations that the program is not expecting
 
@@ -439,7 +447,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 	- Null pointer errors are frequently the result of one or more programmer assumptions being violated. 
 
-- Directory Traversal
+- **Directory Traversal**
 
 	- Also known as a path transversal attack or a "Dot Slash" and is most often launched through a web browser and other clients.
 
@@ -451,17 +459,19 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 			![Example 1](https://raw.githubusercontent.com/DKC-Bluegeneral/Notes/main/Images/Dir-Transversal-Example-1.png)
 
-- Buffer and Integer overflows
 
-	**Buffer Overflows**
+## Buffer and Integer overflows
 
-		- Attacker Sends larger than expected input, for example when a server accepts it and writes to memory areas.
 
-		- Associated buffers are filled and adjacent memory is overwritten as a result.
+- **Buffer Overflows**
 
-		- This everwrite may contain instructions or code that crashes the server resulting in a DoS.
+	- Attacker Sends larger than expected input, for example when a server accepts it and writes to memory areas.
 
-	**Integer Overflows**
+	- Associated buffers are filled and adjacent memory is overwritten as a result.
+
+	- This everwrite may contain instructions or code that crashes the server resulting in a DoS.
+
+- **Integer Overflows**
 
 		- A Type of an arthmetic overflow error when the result of an integer operation does not fit  within the allocated memory space.
 
@@ -471,7 +481,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - Race Conditions - time of check/time of use
 
-	**Race Condition**
+	- **Race Condition**
 
 		- A race condition is when a system or software trise to do two or more things simultaneously, but due to the type of system, the operations must be done in the correct sequence in order or function properly.
 
@@ -479,7 +489,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 		- Crackers can leverage a known race condition vulnerability to get unauthorized access to a system or network.
 
-	**Time-Of-Check vs. Time-Of-Use (TOC/TOU)**
+	- **Time-Of-Check vs. Time-Of-Use (TOC/TOU)**
 
 		- A time-of-check vs time-of-use attack is a race condition and occurs when an attacker tries to gain privelege to a system by "racing" it to a resource it is attempting to access.
 
@@ -568,7 +578,21 @@ The policy administrator (PA) which enables or shuts down the communication path
 	- This technique is known as pass the hash and is one of the attacks that windows Virtual Secure Module (VSM) was intended to protect against.
 
 - By definition a Pass the Hash is a vulnerability of Windows Safe Mode.
+
 	- It is an OS diagnostic mode of peration that has been around since windows 95
-	- It can be initiated at the boot time and only loads the nominal set of drivers and services that windows needs to run. 
-	- Most third-party security products do not start up in safe mode so the protection is negated. 
+
+	- It can be initiated at the boot time and only loads the nominal set of drivers and services that windows needs to run.
+
+	- Most third-party security products do not start up in safe mode so the protection is negated.
+
+
+
+
+
+
+# Driver Manipulation
+
+
+
+
 
