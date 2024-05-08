@@ -784,4 +784,96 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - Man-in-the-Browser attack uses the saem tactics as the MITM except that a Trojan horse is used to capture and manipulate calls between the main browser and its security mechanisms (or libraries) on an ad-hoc basis. 
 
-- The most common usage is financial fraud, which manipulates transactions of Internet 
+- The most common usage is financial fraud, which manipulates transactions of Internet banking and brokerage sites. 
+
+- Works even when other authentication factors are being used. 
+
+
+
+
+
+# Layer 2 Attacks
+
+
+
+
+
+## ARP (Address Resolution Protocol) Poisoning
+
+
+- A form of MITM attack that exploits ARP
+
+- Malicious hosts inject false frames in order to corrupt (poison) the ARP cache buffers on endpoints, switches, servers, firewalls, and routers.
+
+- Exploit kits have seceral scripts, modules, and tools to compromise the ARP protocol.
+
+- It can be mitigated with port security, snooping binding databases on switches, MACsec implementation 802.1AE
+
+
+## MAC Flooding
+
+
+- This attack floods a switch's MAC address table with fake MAC addresses.
+
+- It overwhelms the switch's ability to handle legitimate MAC address mappings.
+
+- It can lead to a switch functioning as a hub, allowing attackers to intercept network traffic.
+
+
+## MAC Cloning
+
+
+- This involves copying the MAC address of a legitimate device onto another device.
+
+- It allows the cloned device to impersonate the legitimate device on the network.
+
+- Attackers can use MAC cloning to bypass MAC address-based security measures or to conduct identity theft on a network.
+
+
+
+
+
+# DNS Attacks
+
+
+
+
+
+## Domain Hijacking DNS Attack
+
+
+- Domain hijacking or clickjacking, is also called user interface redress attack, UI redress attack, and UI redressing.
+
+- Hacker uses several transparent layers to trick users into clicking on a button (or link) on another web page when they were actually trying to click on the top-level web page.
+
+- Attacker hijacks clicks meant for their page and routes them to another page, often controlled by another domain or application.
+
+- Keystrokes can also be hijacked with skillfully constructed iframes, CSS, and text boxes. 
+
+- This can also be done through URL redirection. 
+
+
+## DNS Poisoning
+
+
+ - This attack involves corrupting the DNS cache with false information.
+
+ - Attackers can manipulate DNS records to redirect users to malicious websites.
+
+ - It can be achieved through various methods such as DNS spoofing or cache poisoning.
+
+ - DNS poisoning can result in users unknowingly accessing fake websites or being redirected to phishing pages.
+
+
+ ## Domain Reputation Attacks
+
+
+ - Involves tarnishing the reputation of a domain or website to undermine trust.
+
+ - Attackers may engage in activities like spamming or hosting malicious content to damage a domain's reputation.
+
+ - These attacks aim to lower the credibility of the domain in the eyes of users and search engines.
+
+ - Negative reputation can lead to reduced traffic, blacklisting by email providers, or lower search engine rankings.
+
+ 
