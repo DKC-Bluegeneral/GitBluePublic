@@ -1,3 +1,13 @@
+![CompTIALogo](https://github.com/DKC-Bluegeneral/Notes/blob/main/Images/CompTIASecPlus.jpeg)
+
+
+
+
+
+
+
+
+
 # Gap Analysis
 
 
@@ -638,13 +648,50 @@ The policy administrator (PA) which enables or shuts down the communication path
 - Most malware attacks are multi-phased, stealthy, and polymorphic. Below is a list of some common wireless attacks:
 
 
-	- Evil Twins
-	- Rogue AP
-	- Disassociation
-	- Jamming
-	- Weak IV
-	- WPA3 attack
-	- Bluesnarfing
-	- Bluejacking
-	- RFID
-	- NFC
+### Evil Twins
+
+- Evil Twin attacks involve setting up a fake wireless access point (AP) with the same SSID (Service Set Identifier) as a legitimate one, tricking users into connecting to it.
+
+	- Examples include:
+
+		- An attacker sets up a rogue AP in a public place, such as a coffee shop, with the same network name (SSID) as the legitimate coffee shop Wi-Fi.
+
+		- Creating a fake Wi-Fi hotspot near an airport with a name similar to the airport's official Wi-Fi network to capture unsuspecting travelers' data.
+
+### Rogue AP
+
+-  Rogue APs are unauthorized access points set up on a network without the network administrator's knowledge or consent, posing a security risk.
+
+	- Examples Include:
+
+		- An employee brings in a personal wireless router and connects it to the company network, providing unauthorized access to outsiders.
+
+		- A hacker installs a rogue AP in a hotel lobby, mimicking the hotel's Wi-Fi network to intercept guests' internet traffic.
+
+### Disassociation
+
+- Disassociation attacks force wireless clients to disconnect from a legitimate AP by sending forged disassociation packets, disrupting their network connectivity.
+
+	- Examples Include:
+
+		- An attacker sends deauthentication packets to users connected to a public Wi-Fi network, causing them to lose connectivity.
+
+		- Disrupting a business's wireless network during a critical meeting by sending disassociation frames to all connected devices.
+
+### Jamming
+
+- Jamming attacks involve flooding the wireless spectrum with noise or interference, disrupting legitimate communication between devices and access points.
+
+	- Examples Include:
+
+		- A malicious actor uses a jamming device to flood the 2.4 GHz frequency band, disrupting Wi-Fi signals in a crowded area.
+
+		- Jamming the frequency used by remote-controlled drones to prevent them from operating in a restricted airspace.
+
+### Weak IV
+
+### WPA3 attack
+### Bluesnarfing
+### Bluejacking
+### RFID
+### NFC
