@@ -1,3 +1,9 @@
+# __CompTIA SYO-701 Security + Study Notes__
+
+
+
+
+
 ![CompTIALogo](https://github.com/DKC-Bluegeneral/Notes/blob/main/Images/CompTIASecPlus.jpeg)
 
 
