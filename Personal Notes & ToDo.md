@@ -1,6 +1,6 @@
 # To Do List
 
-**Videos I need to Take Better Notes On**
+## Videos I need to Take Better Notes On
 
 - [ ] Video Training: Analyzing Application & Network Attacks (After XSS)
 - [ ] Video Training: Practical Cryptography
@@ -9,7 +9,7 @@
 - [ ] Video Training: Fundamental Security Concepts
 	
 
-**Other Tasks**
+## Other Tasks
 
 - [ ] Migrate notes from google docs to this and format
 - [ ] 
