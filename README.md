@@ -2,7 +2,7 @@
 
 
 
-Currently in school and am taking lots of notes certifications, and have plans for documenting home labs when I get time...
+Currently in school and am taking lots of notes for certifications, I also have plans for documenting home labs when I get time...
 
 
 - Here are the certifications I will be obtaining.
