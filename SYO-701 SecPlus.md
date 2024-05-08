@@ -444,30 +444,36 @@ The policy administrator (PA) which enables or shuts down the communication path
 - Performs unauthorized tasks or accessable data. 
 
 
-# Coding Attacks
 
 
-- **Pointer/object dereference**
 
-	- An attacker can supply a pointer for memory locations that the program is not expecting
+# Targeted Coding Attacks
 
-	- A Null-pointer dereference occurs when a pointer with a value of NULL is used as if it actually points to a valid memory area
 
-	- A program can possibly dereference a null pointer, and in doing so, raise a NullPointerException
 
-	- Null pointer errors are frequently the result of one or more programmer assumptions being violated. 
 
-- **Directory Traversal**
 
-	- Also known as a path transversal attack or a "Dot Slash" and is most often launched through a web browser and other clients.
+## Pointer/object dereference
 
-	- This HTTP exploit allows and attacker to access restricted files, directories, and commands located outside of the root directory
+- An attacker can supply a pointer for memory locations that the program is not expecting
 
-	- Attackers can modify a URI or URL to force the web server into exposing the restricted files.
+- A Null-pointer dereference occurs when a pointer with a value of NULL is used as if it actually points to a valid memory area
 
-		- Examples Include:
+- A program can possibly dereference a null pointer, and in doing so, raise a NullPointerException
 
-			![Example 1](https://raw.githubusercontent.com/DKC-Bluegeneral/Notes/main/Images/Dir-Transversal-Example-1.png)
+- Null pointer errors are frequently the result of one or more programmer assumptions being violated. 
+
+## Directory Traversal
+
+- Also known as a path transversal attack or a "Dot Slash" and is most often launched through a web browser and other clients.
+
+- This HTTP exploit allows and attacker to access restricted files, directories, and commands located outside of the root directory
+
+- Attackers can modify a URI or URL to force the web server into exposing the restricted files.
+
+	- Examples Include:
+
+		![Example 1](https://raw.githubusercontent.com/DKC-Bluegeneral/Notes/main/Images/Dir-Transversal-Example-1.png)
 
 
 ## Buffer and Integer overflows
@@ -507,7 +513,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 	- It can do things such as replacing a config.sys file with a different file that compromises the system before the system even loads it's operating system.
 
-- Improper error handling
+- **Improper error handling**
 
 	- Poorly defined validation rules used in verifying the correctness, completeness, and acceptability of input data.
 
@@ -517,7 +523,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 	- Collusions are in this category when the chance that two unique inputs will produce the same output (MD5 and SHA-1 are vulnerable)
 
-- Session replay attacks
+- **Session replay attacks**
 
 	- Often part of MITM attacks.
 
@@ -688,10 +694,76 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 		- Jamming the frequency used by remote-controlled drones to prevent them from operating in a restricted airspace.
 
-### Weak IV
+### Weak IV (Initialization Vector)
+
+- Weak IV attacks exploit vulnerabilities in the encryption process, particularly targeting outdated encryption protocols like WEP (Wired Equivalent Privacy).
+
+	- Examples Include:
+
+		- Intercepting and decrypting WEP-encrypted Wi-Fi traffic using tools like Aircrack-ng and capturing weak IVs.
+
+		- Exploiting predictable IVs in WEP to launch attacks that reveal the network's encryption key.
 
 ### WPA3 attack
+
+- WPA3 attacks target weaknesses or implementation flaws in the WPA3 (Wi-Fi Protected Access 3) security protocol.
+
+	- Examples Include:
+
+		- Exploiting vulnerabilities in the WPA3 handshake process to bypass authentication and gain unauthorized access to a secured Wi-Fi network.
+
+		- Brute-forcing weak passwords protected by WPA3-Personal encryption to gain access to the network.
+
 ### Bluesnarfing
+
+- Bluesnarfing involves unauthorized access to information on a Bluetooth-enabled device, such as contacts, emails, or files.
+
+	- Examples Include:
+
+		- Exploiting a vulnerability in a smartphone's Bluetooth implementation to remotely access its contact list and personal data.
+
+		- Using specialized software to intercept Bluetooth communications between a mobile device and a car's infotainment system to steal sensitive information.
+
 ### Bluejacking
-### RFID
-### NFC
+
+- Bluejacking is the act of sending unsolicited messages or data to Bluetooth-enabled devices within range, often for advertising or social engineering purposes.
+
+	- Examples Include:
+
+		- Sending anonymous messages or business cards to nearby Bluetooth-enabled smartphones in a crowded area to elicit a response or prank unsuspecting users.
+
+		- Broadcasting promotional messages or advertisements to Bluetooth-equipped digital signage or display boards in public spaces.
+
+### RFID (Radio Frequency Identification)
+
+- RFID attacks target vulnerabilities in RFID systems to exploit or manipulate RFID tags or readers.
+
+	- Examples Include:
+
+		- Cloning RFID access cards used for building entry systems to gain unauthorized physical access to secured facilities.
+
+		- Intercepting and modifying data transmitted between RFID tags and readers in a supply chain environment to alter inventory records or steal goods.
+
+### NFC (Near Field Communication)
+
+- NFC attacks exploit weaknesses in NFC-enabled devices or protocols to perform unauthorized transactions or access sensitive data.
+
+	- Examples Include:
+
+		- Intercepting NFC payment transactions between a smartphone and a point-of-sale terminal to capture credit card information for fraudulent purposes.
+
+		- Exploiting vulnerabilities in NFC-enabled access control systems to bypass authentication and gain unauthorized entry to restricted areas.
+
+
+
+
+
+# Man-in-the-Middle Attacks
+
+
+
+
+
+- **MITM**
+
+	- A Man in the middle can be a good (Proxy, ALG, Translators) or it can be dangerous (Proxy ARP, DHCP Spoofing)
