@@ -973,6 +973,92 @@ The policy administrator (PA) which enables or shuts down the communication path
 - 
 
 
+## Security Information and Event Management
+
+- Agent based
+- 
+
+
+## Alert Tuning
+
+
+- Techniques for Tuning
+	- Muting
+	- Redirecting "floods"
+	- 
+
+
+## Monitering Infastructure
+
+
+- Network Moniters
+- Appliance state data
+- Simple Network Managment Protocol (SNMP) traps
+- Netflow/IPFIX (Internet Protocol Flow Information Export)
+- Cloud Service health
+-
+
+
+## Benchmarks
+
+
+- Scanning for configuration vulnerabilities
+- Lack of controls
+- Improper configuration
+- Security content automation protocol (SCAP)
+- Language to enable scanners to load configuration benchmarks and scan for deviations. 
+
+
+
+## Malware Classification
+
+- **Viruses**
+	- Spread within code without authorization.
+
+- **Worms**
+	- Self-replicating malware that spreads across networks.
+
+- **Trojans**
+	- Malicious programs disguised as legitimate software.
+
+- **Potentially Unwanted Programs (PUPs)**
+	- Software that may be unwanted or harmful, but not necessarily classified as malware.
+
+- **Pre-installed Bloatware**
+	- Software pre-installed on devices by manufacturers, often unnecessary and resource-intensive.
+
+- **Grayware**
+	- Software that exhibits behaviors similar to both legitimate software and malware, such as adware or spyware.
+
+- **Classification by Payload**
+	- Categorization based on the type of malicious activity or impact, such as ransomware, spyware, or keyloggers.
+
+- Tracking Cookies 
+- Adware
+- Spyware
+- Keylogger
+- 
+
+
+## Backdoors and Remote Access Trojans (RAT)
+
+- Backdoor malware
+- RAT
+- Bots and botnets
+- Command and control (C2 or C&C)
+- Backdoors installed through misconfiguration
+
+
+## Rootkits
+
+- Local administrator vs SYSTEM/root priveleges 
+
+
+## Randomware 
+
+- 
+ 
+
 ## Random
 
 - Go check out the slides in class resources and make better notes for this section.
