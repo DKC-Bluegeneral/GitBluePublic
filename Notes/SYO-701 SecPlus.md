@@ -915,3 +915,67 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 	- Upon receiving the final FIN packet, both sides complete the connection termination.
 
+
+
+
+
+# Rough Class Notes (Forensics)
+
+
+
+
+
+## Incident Response Steps
+
+- Preperation
+
+- Detection
+
+- Analysis
+
+- Containment
+
+- Eradication
+
+- Recovery
+
+
+## Aquisition of Data
+
+- Order of Volitility (Important)
+- Know that in Linux the `DD` Command creates images
+
+
+## Preservation of Data
+
+- Use a write blocker
+- 
+
+
+## Reporting 
+
+- E-Discovery is a thing in Azure for holding data, check this out later. 
+- 
+
+
+## Data Sources, Dashboards, and Reports
+
+- Know all the different log types
+- Learn to identify the different logs for the test.
+- Firewall Logs 
+	- Accept/Deny Logs
+
+
+
+## Metadata
+
+- Data about Data
+- 
+
+
+## Random
+
+- Go check out the slides in class resources and make better notes for this section.
+- Do day 7 lab for log files
+- Get your SIEM up and running and learn to read logs and packets.
+
