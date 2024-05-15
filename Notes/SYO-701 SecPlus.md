@@ -1331,12 +1331,92 @@ The policy administrator (PA) which enables or shuts down the communication path
 ## Mean Time Between Failures (MTBF)
 
 
+- A measure of how reliable a hardware system or component is
+- For most devices, the measure is in thousands, or tens of thousands of hours between failures
+- For example:
+	- An SSD may have a mean time between failures of 10 years
+		-Typically SSD's have a MTBF that is much longer than HDD's
 
 
+## Mean Time to Repair (MTTR)
 
 
+- How long does it take to repair?
+
+	- Measures time it takes to fix it
+
+	- Average value predicted based on expierence and documentation. 
+
+	- It can be calculated by:
+
+		`[Total Down Time] * [Number of Breakdowns]`
 
 
+## Maximum Tolerable Downtime
+
+- Absolute maximum amount of time that a resource, service, or function can be unavaliable before we start to expierence a loss
+
+- Factors to consider are:
+
+	- Finances
+
+	- Life/Safety
+
+	- Reglatory
+
+	- Legal/Contracts
+
+	- Reputation
+
+	- Property
+
+
+## Privacy Breach Consequences
+
+
+### Main causes of Data Breach
+
+- **Cyber Attacks**
+
+	- Unauthorized access or intrusion into computer systems or networks with malicious intent.
+
+- **Device Loss or Theft**
+
+	- Physical loss or theft of devices such as laptops, smartphones, or external drives containing sensitive data.
+
+- **Employee Leakage or Theft**
+
+	- Intentional or unintentional disclosure of sensitive information by employees, either through negligence or malicious intent.
+
+- **Human Errors**
+
+	- Mistakes or errors made by employees or system users that lead to the exposure or compromise of sensitive data.
+
+### 6 Major Forms of Loss
+
+- **Productivity**
+
+	- Disruption of normal business operations and workflow, resulting in decreased productivity and efficiency.
+
+- **Response**
+
+	- Costs associated with incident response, including investigation, mitigation, and recovery efforts.
+
+- **Replacement**
+
+	- Expenses related to replacing compromised hardware, software, or infrastructure affected by the breach.
+
+- **Fines and Judgements**
+
+	- Financial penalties imposed by regulatory authorities or legal judgments resulting from non-compliance with data protection regulations or breach of privacy laws.
+
+- **Competitive Advantage**
+
+	- Loss of market position or competitive edge due to damage to brand reputation or loss of customer trust.
+
+- **Reputation**
+
+	- Long-term damage to the organization's reputation and trustworthiness among customers, partners, and stakeholders.
 
 
 
