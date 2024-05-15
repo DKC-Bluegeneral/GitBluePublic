@@ -1045,7 +1045,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 		- Risk the orginazation faces if safeguard is not implemented
 	- **Residual**:
 		- Risk that remains once a safeguard is in place
-	- **Residual = inherent risk
+	- **Residual = inherent risk-safeguards (controls)**
 
 
 
