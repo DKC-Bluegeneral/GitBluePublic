@@ -943,7 +943,8 @@ The policy administrator (PA) which enables or shuts down the communication path
 	- Poor awareness
 	- E-mail and webmail
 	- USB's and personal electronics
-
+- Multi-Party Risks
+	- Orgini
 
 	## Internal Risks
 
@@ -965,7 +966,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 
-
+`//////////////////////////Line seperator here for when I need to add something, Check this out, It Probably needs removed later///////////////////////////////////////////////////`
 
 
 
@@ -1367,26 +1368,96 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 ## Backdoors and Remote Access Trojans (RAT)
 
-- Backdoor malware
-- RAT
-- Bots and botnets
-- Command and control (C2 or C&C)
-- Backdoors installed through misconfiguration
+- **Backdoor Malware:**
+
+	- Backdoor malware is a type of malicious software that enables unauthorized access to a system or network by creating a hidden entry point, known as a backdoor. Attackers exploit backdoors to bypass security controls and gain persistent access to compromised systems, allowing them to steal data, install additional malware, or launch further attacks.
+
+- **Remote Access Trojans (RAT):**
+
+	- Remote Access Trojans (RATs) are malicious programs that provide attackers with unauthorized remote access to infected systems. RATs typically include features for remote control, file manipulation, screen capture, and keystroke logging, allowing attackers to monitor user activity, steal sensitive information, and execute commands remotely without the user's knowledge.
+
+- **Bots and Botnets:**
+
+	- Bots are compromised computers or devices infected with malware that allows them to be controlled remotely by a botmaster. Botnets are networks of interconnected bots that can be harnessed by attackers to perform coordinated attacks, such as distributed denial-of-service (DDoS) attacks, spam campaigns, or credential stuffing attacks. Botnets are often used to propagate malware, steal data, or carry out large-scale cybercrime operations.
+
+- **Command and Control (C2 or C&C):**
+
+	- Command and control (C2 or C&C) refers to the communication infrastructure used by attackers to remotely control and manage compromised systems or botnets. C2 servers act as centralized command hubs for issuing instructions to infected devices, receiving stolen data, and coordinating malicious activities. Detecting and disrupting C2 communications is essential for mitigating the impact of malware infections and preventing further compromise.
+
+- **Backdoors Installed Through Misconfiguration:**
+
+	- Backdoors can also be inadvertently created through misconfigurations or vulnerabilities in software, services, or devices. Attackers exploit misconfigurations to establish unauthorized access points, bypassing authentication mechanisms and security controls. Common misconfigurations that lead to backdoor installations include default passwords, open ports, insecure network services, and unpatched software vulnerabilities.
+
 
 
 ## Rootkits
 
-- Local administrator vs SYSTEM/root priveleges 
+- **Local Administrator vs SYSTEM/Root Privileges:**
+
+	- Local administrator privileges refer to the highest level of access rights granted to a user account on a local system. Users with local administrator privileges have full control over system resources and can install software, modify system settings, and access sensitive data.
+	- SYSTEM or root privileges, on the other hand, represent the highest level of access rights on a computer system, typically associated with the operating system's kernel or core processes. Users with SYSTEM/root privileges have unrestricted access to all system resources and can perform privileged operations that are not available to regular users or even local administrators.
+	- Rootkits are malicious software components designed to exploit vulnerabilities and gain unauthorized access to a system, often by escalating privileges to the SYSTEM or root level. Once installed, rootkits can conceal their presence, manipulate system behavior, and evade detection by security software, making them particularly dangerous and difficult to detect and remove.
+
+- **Persistence Mechanisms:**
+
+	- Rootkits employ various persistence mechanisms to maintain their presence on a compromised system even after reboots or security measures are applied. Persistence mechanisms may include modifying system files, registry entries, boot sectors, or system configurations to ensure the rootkit's persistence and resilience against removal attempts.
+
+- **Kernel Level Rootkits:**
+
+	- Kernel-level rootkits operate at the lowest level of the operating system, directly interacting with the kernel and system processes. These rootkits manipulate kernel data structures, system calls, and memory allocations to conceal their presence and control system behavior. Kernel-level rootkits are highly sophisticated and difficult to detect due to their deep integration into the operating system.
+
+- **User Level Rootkits:**
+
+	- User-level rootkits operate within user-space processes and applications, exploiting vulnerabilities in user-mode components to gain elevated privileges and execute malicious activities. Unlike kernel-level rootkits, user-level rootkits do not directly modify system components or kernel data structures, making them less stealthy but still effective at evading detection and performing unauthorized actions.
+
+- **Memory Resident Rootkits:**
+
+	- Memory-resident rootkits reside entirely in system memory, without leaving traces on disk or modifying system files. These rootkits inject malicious code into running processes or system memory regions, allowing them to intercept system calls, manipulate system behavior, and hide their presence from traditional file-based security tools. Memory-resident rootkits are difficult to detect and remove due to their volatile nature and ability to evade disk-based scanning techniques.
+
+- **File System Rootkits:**
+
+	- File system rootkits manipulate file system structures and objects to conceal their presence and control system behavior. These rootkits may modify file attributes, directory entries, or file contents to hide malicious files, processes, or network connections from users and security tools. File system rootkits can be persistent or non-persistent, depending on their ability to survive system reboots and security measures.
+
+- **Detection and Removal Techniques:**
+
+	- Detecting and removing rootkits require specialized tools and techniques capable of identifying stealthy and persistent malware components. Detection techniques may include memory forensics, system integrity checks, behavioral analysis, and heuristic scanning. Removal techniques may involve using rootkit-specific removal tools, bootable antivirus rescue disks, or performing system restores from clean backup images.
 
 
-## Randomware 
 
-- 
+## Ransomware 
+
+- **Definition and Characteristics:**
+
+	- Ransomware is a type of malicious software designed to encrypt files or block access to a computer system or data until a ransom is paid. It typically exhibits characteristics such as file encryption, ransom demands, payment instructions, and deadlines for payment. Ransomware may also display threatening messages or warnings to coerce victims into paying the ransom.
+
+- **Encryption Techniques:**
+
+	- Ransomware employs advanced encryption techniques, such as symmetric or asymmetric encryption algorithms, to encrypt files and data on infected systems. Symmetric encryption uses a single encryption key to encrypt and decrypt data, while asymmetric encryption uses a pair of public and private keys for encryption and decryption. Encryption keys are generated by the ransomware and stored on remote servers controlled by the attackers.
+
+- **Delivery Methods:**
+
+	- Ransomware can be delivered to victims through various attack vectors, including malicious email attachments, phishing links, exploit kits, malicious websites, removable media, and compromised software or applications. Attackers may also leverage social engineering tactics to trick users into downloading and executing ransomware payloads.
+
+- **Ransom Payment and Cryptocurrency:**
+
+	- Ransomware typically demands payment in cryptocurrency, such as Bitcoin, Ethereum, or Monero, to facilitate anonymous transactions and evade law enforcement detection. Victims are instructed to purchase cryptocurrency and transfer the ransom amount to a specified wallet address controlled by the attackers. Payment does not guarantee decryption or restoration of data, as attackers may fail to provide decryption keys or tools after receiving payment.
+
+- **Impact on Organizations:**
+
+	- Ransomware attacks can have devastating consequences for organizations, including data loss, financial losses, operational disruptions, reputational damage, and regulatory penalties. Ransomware infections may result in encrypted files, system downtime, loss of productivity, customer trust erosion, and legal liabilities, posing significant risks to business continuity and information security.
+
+- **Mitigation Strategies:**
+
+	- Organizations can implement various mitigation strategies to prevent, detect, and respond to ransomware attacks. These strategies may include regular data backups and offsite storage, employee security awareness training, patch management, endpoint protection solutions, network segmentation, email filtering, incident response planning, and ransomware-specific security controls.
+
+- **Incident Response and Recovery Procedures:**
+
+	- Effective incident response and recovery procedures are essential for minimizing the impact of ransomware attacks and restoring affected systems and data. Organizations should have incident response plans in place to guide response efforts, including containment, eradication, recovery, and communication with stakeholders. Recovery procedures may involve restoring data from backups, decrypting files using decryption tools or services, and rebuilding compromised systems from clean images.
+
  
 
 ## Random
 
-- Go check out the slides in class resources and make better notes for this section.
 - Do day 7 lab for log files
 - Get your SIEM up and running and learn to read logs and packets.
 
