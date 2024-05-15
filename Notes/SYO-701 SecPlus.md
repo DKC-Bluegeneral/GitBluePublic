@@ -992,23 +992,41 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 - Structured Threats
+
 	- Planned
+
 	- Organized
-	- Persistant
+
+	- Persistent
+
 	- Multi-phased
+
 	- Can be external or internal
+
 	- Exploit Kits, zero-days, modules, and ransomware
+
 - Unstructured threats
+
 	- Accidental
+
 	- Non-malicious
+
 	- Drive-by Web Surfing
+
 	- No AUP
+
 	- Poor awareness
+
 	- E-mail and web-mail
+
 	- USB's and personal electronics
+
 - Multi-Party Risks
+
 	- Organizations that operate with outsourcing, suppliers, licensees, agents, and the like.
+
 	- The frequency and scale of third-party use has grown substantially over the last two decades.
+
 	- There is greater regulatory emphasis on how organizations manage third parties to address the inherent risks
 
 	## Internal Risks
@@ -1044,7 +1062,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 	- Usually described as a percentage, or probability.
 
 		- **Inherent** (total) risk:
-			- Risk the orginazation faces if safeguard is not implemented
+			- Risk the organization faces if safeguard is not implemented
 		- **Residual**:
 			- Risk that remains once a safeguard is in place
 		- **Residual = inherent risk-safeguards (controls)**
@@ -1052,7 +1070,98 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - **Assessing Risk**
 	- What are your assets at risk?
-		- Both tangable and non-tangable
+		- Both tangible and non-tangible
+		- Value
+	- Identify risks to those assets
+		- Vulnerability, threats, and attacks
+		- Who, Why, and How
+	- Only focus on risks that are likely to occur
+		- Maximizes available resources
+		- Focus on most likely to least likely
+
+
+- **Risk Register**
+	- Scatter plot/table
+	- Fulfills regulatory compliance
+		- Repository of identified risks, impact, scenarios, and potential responses
+
+
+- **Qualitative Risk Analysis**
+	- Descriptive approach using subjective opinions, history, and scenarios to determine risk levels. 
+		- Expert Judgement
+		- Best practices
+		- Experience
+		- Intuition
+	- Often involves interviewing people (using Delphi methods) regarding assets, known risks, known vulnerabilities, common threats, and historical impacts.
+	- Impact (Magnitude) vs. Likelihood (Probability)
+		- Usually measured on a scale
+
+
+## Delphi Method
+
+- The Delphi method is a structured communication technique used to gather opinions from a group of experts on a particular topic or problem. Here's how it typically works:
+
+	- **Selection of Experts**: 
+
+		- A panel of experts with knowledge or expertise in the relevant field is selected. These experts may come from diverse backgrounds but share a common interest in the subject matter.
+
+	- **Anonymity**: 
+
+		- The experts participate anonymously, which means their identities are typically concealed from each other. This anonymity encourages honest and unbiased input.
+
+	- **Round-Based Feedback**: 
+
+		- The process typically involves multiple rounds of questioning or surveys. In each round, experts are asked to provide their opinions, forecasts, or evaluations on specific questions or scenarios related to the topic under consideration.
+
+	- **Feedback and Iteration**: 
+
+		- After each round, the responses are compiled and summarized by a facilitator or moderator. The results are then shared with the experts in subsequent rounds. Experts may revise their opinions based on the feedback received from others in previous rounds.
+
+	- **Consensus Building**: 
+
+		- The goal of the Delphi method is often to reach a consensus or convergence of opinions among the experts. This consensus may be achieved through repeated rounds of questioning and feedback until the responses stabilize or converge around a particular viewpoint or prediction.
+
+	- **Final Report**: 
+
+		- Once the process is completed and consensus is reached (or a predetermined stopping point is reached), a final report summarizing the findings, insights, and consensus of the expert panel is typically generated.
+
+- The Delphi method is commonly used in various fields such as forecasting, strategic planning, policy-making, and technology assessment, where there is uncertainty or complexity, and input from multiple experts can provide valuable insights and predictions.
+
+
+## Quantitative Risk Analysis
+
+
+- Scientific/mathematical approach to getting monetary and numeric results based on the following:
+	- Asset values
+	- Impact and magnitude
+		- Severity of incident
+	- Probability and likelihood of occurrence
+		- Threat frequency
+	- Costs and effectiveness of safeguards
+	- Probabilities based on percentages and calibrated estimation
+
+
+## Classic (Whitman) Quantitative Analysis
+
+
+- **AV (Asset Value)**
+	- Value of the asset according to the organization
+- **EF (Exposure Factor)**
+	- Percentage of asset loss caused by identified threat
+- **SLE (Single Loss Expectancy)**
+	- Potential loss of attack occurs
+	- `[Asset Value] * [Exposure Factor]`
+- **ARO (Annualized Rate of Occurrence)**
+	- Estimated frequency the threat will occur within a single year
+- **ALE (Annualized Loss Expectancy)**
+	- `[SLE] * [ARO]`
+	
+
+
+
+
+
+
 
 
 
