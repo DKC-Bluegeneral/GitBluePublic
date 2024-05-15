@@ -1033,25 +1033,40 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 	- Can be introduced due to the following:
+
 		- Poor physical security
+
 		- Lack of additional authentication Factors
+
 		- Non-enforcement of security policy
+
 		- Substandard auditing and monitoring of privileged insiders
+
 		- Poor patch, configuration, and change management
+
 		- Lack of automated vulnerability assessment
+
 		- Absence of endpoint detection
 
 
 ## Risk Management Strategies 
 
 - Risk Acceptance
+
+
 	- Do not implement safeguards
 		- Justification in writing is often required
+
 - Risk Avoidance
+
 	- Choose not to undertake actions that reduce risk
+
 - Risk Transference/sharing
+
 	- Pass the risk to a third-party, such as an insurance company or a cloud service provider.
+
 - Risk mitigation
+
 	- Implement safeguards that will eliminate or reduce risk exposure - risk may exist, but impact is reduced
 
 
@@ -1059,41 +1074,66 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 - **Defining Risk**
+
 	- Usually described as a percentage, or probability.
 
 		- **Inherent** (total) risk:
+
 			- Risk the organization faces if safeguard is not implemented
+
 		- **Residual**:
+
 			- Risk that remains once a safeguard is in place
+
 		- **Residual = inherent risk-safeguards (controls)**
 
 
 - **Assessing Risk**
+
 	- What are your assets at risk?
+
 		- Both tangible and non-tangible
+
 		- Value
+
 	- Identify risks to those assets
+
 		- Vulnerability, threats, and attacks
+
 		- Who, Why, and How
+
 	- Only focus on risks that are likely to occur
+
 		- Maximizes available resources
+
 		- Focus on most likely to least likely
 
 
 - **Risk Register**
+
 	- Scatter plot/table
+
 	- Fulfills regulatory compliance
+
 		- Repository of identified risks, impact, scenarios, and potential responses
 
 
 - **Qualitative Risk Analysis**
+
 	- Descriptive approach using subjective opinions, history, and scenarios to determine risk levels. 
+
 		- Expert Judgement
+
 		- Best practices
+
 		- Experience
+
 		- Intuition
+
 	- Often involves interviewing people (using Delphi methods) regarding assets, known risks, known vulnerabilities, common threats, and historical impacts.
+
 	- Impact (Magnitude) vs. Likelihood (Probability)
+
 		- Usually measured on a scale
 
 
@@ -1132,12 +1172,19 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 - Scientific/mathematical approach to getting monetary and numeric results based on the following:
+
 	- Asset values
+
 	- Impact and magnitude
+
 		- Severity of incident
+
 	- Probability and likelihood of occurrence
+
 		- Threat frequency
+
 	- Costs and effectiveness of safeguards
+
 	- Probabilities based on percentages and calibrated estimation
 
 
@@ -1145,17 +1192,145 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 - **AV (Asset Value)**
+
 	- Value of the asset according to the organization
+
 - **EF (Exposure Factor)**
+
 	- Percentage of asset loss caused by identified threat
+
 - **SLE (Single Loss Expectancy)**
+
 	- Potential loss of attack occurs
+
 	- `[Asset Value] * [Exposure Factor]`
+
 - **ARO (Annualized Rate of Occurrence)**
+
 	- Estimated frequency the threat will occur within a single year
+
 - **ALE (Annualized Loss Expectancy)**
+
 	- `[SLE] * [ARO]`
 	
+
+![Whitman](https://github.com/DKC-Bluegeneral/GitBluePublic/blob/main/Images/Whitman-Tolerability-Curve.png)
+
+
+## Disaster Types and Classifications
+
+- **Enviromental**
+
+	- Earthquakes
+
+	- Wildfires
+
+	- Flooding
+
+	- Snow
+
+	- Tsunamis
+
+	- Hurricanes
+
+	- Tornados
+
+	- Landslides
+
+	- Asteroids
+
+- **Man-Made Intentional**
+
+	- Arson
+
+	- Terrorist
+
+	- Political
+
+	- Break-Ins
+
+	- Theft
+
+	- Damage
+
+	- File Destruction
+
+	- Information Disclosure
+
+- **Man-Made Unintentional**
+
+	- Mistakes
+
+	- Power Outage
+
+	- Illness
+
+	- Pandemics
+
+	- Information Disclosure
+
+	- Damage
+
+	- File Destruction
+
+	- Coding Errors
+
+
+## Business Impact Analysis
+
+
+- Risk assessment aspect of the Business Contitinuity Plan (BCP)
+
+	- Identify critical functions to the business and prioritize them based on need for survival
+
+- Identify the risks assiciated with the critical funcations
+
+	- The probability of risk occuring (Likelihood)
+
+	- The impact the risk will have (Magnitude)
+
+- Identify how to eliminate the risk or reduce the risk
+
+
+## Recovery Time Objective (RTO)
+
+- The amount of time avaliable to recover the resource, service, or platform
+
+	- This must be equal to or less than the Maximum Tolerable Downtime (MTD)
+
+	- Any solutions must be accomplished within this time frame or it is considered a loss. Examples include:
+
+		- Add physical security
+
+		- Add redundancy
+
+		- Purchase insurance
+
+		- Invest in backup generators
+
+		- Investment in faster components
+
+		- Safeguard media off-site
+
+
+## Recovery Point Objective (RPO)
+
+- The point in time, relative to a disaster, where the recovery process begins
+
+	- **Questions to ask yourself:**
+
+		- How much work can be lost if a disruption occurs?
+
+		- What impact will it have?
+
+		- How do we make sure we don't lose more than "X" information/data?
+
+	- This is usually your last backup, or restore point that was performed before the destructive event.
+
+
+## Mean Time Between Failures (MTBF)
+
+
 
 
 
