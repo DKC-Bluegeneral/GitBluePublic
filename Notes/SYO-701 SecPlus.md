@@ -919,6 +919,58 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 
+# Risk Types
+
+
+
+
+
+## Risk Types
+
+
+- Structured Threats
+	- Planned
+	- Organized
+	- Persistant
+	- Multi-phased
+	- Can be external or internal
+	- Exploit Kits, zero-days, modules, and ransomware
+- Unstructured threats
+	- Accidental
+	- Non-malicious
+	- Drive-by Web Surfing
+	- No AUP
+	- Poor awareness
+	- E-mail and webmail
+	- USB's and personal electronics
+
+
+	## Internal Risks
+
+
+	- Can be introduced due to the following:
+		- Poor physical security
+		- Lack of additional authentication Factors
+		- Non-enforcement of security policy
+		- Substandard auditing and monitering of priveleged insiders
+		- Poor patch, configuration, and change management
+		- Lack of automated vulnerability assessment
+		- Absence of endpoint detection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Rough Class Notes (Forensics)
 
 
@@ -927,117 +979,390 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 ## Incident Response Steps
 
-- Preperation
 
-- Detection
+- **Preparation:**
 
-- Analysis
+	- This phase involves establishing policies, procedures, and mechanisms to prepare for potential security incidents. It includes tasks such as creating incident response plans, defining roles and responsibilities, and implementing security controls.
 
-- Containment
+- **Detection:**
 
-- Eradication
+	- In this phase, security teams actively monitor systems and networks for signs of security incidents. Detection mechanisms may include intrusion detection systems (IDS), security information and event management (SIEM) tools, and manual monitoring by security personnel.
 
-- Recovery
+- **Analysis:**
+
+	- Once a potential security incident is detected, the next step is to analyze the nature and scope of the incident. This involves gathering evidence, conducting forensic analysis, and assessing the impact on affected systems and data.
+
+- **Containment:**
+
+	- After analyzing the incident, the focus shifts to containing its spread and minimizing further damage. This may involve isolating affected systems or networks, blocking malicious activity, and preventing unauthorized access.
+
+- **Eradication:**
+
+	- In this phase, security teams work to completely remove the threat actor from the environment. This may involve removing malware, closing security vulnerabilities, and restoring affected systems to a known good state.
+
+- **Recovery:**
+
+	- Once the threat has been eradicated, the final phase is to restore affected systems and operations to normal. This may involve restoring data from backups, reconfiguring systems, and implementing additional security measures to prevent future incidents.
 
 
-## Aquisition of Data
 
-- Order of Volitility (Important)
-- Know that in Linux the `DD` Command creates images
+## Acquisition of Data
+
+
+- **Order of Volatility (Important):** 
+	- Understanding the sequence in which volatile data should be collected to ensure its preservation before it is lost or overwritten. This hierarchy typically includes capturing system memory first, followed by network state, running processes, open files and ports, registry and temporary file systems, disk swap space, and non-volatile data from hard drives and removable media.
+
+- **Linux `DD` Command:** 
+	- A versatile tool used in Linux and Unix-like operating systems for low-level copying and conversion of data. Commonly used for disk imaging to create exact copies of storage devices or partitions, preserving not only file contents but also partition tables, boot sectors, and other metadata.
+
+- **Data Acquisition Methods:**
+
+  	- **Live System Imaging:**
+
+  		- Acquiring data from a live system while it is running, often using specialized tools or techniques to minimize disruption and maintain system integrity.
+
+  	- **Remote Acquisition:**
+
+  		- Gathering data from a remote system or network location, typically over a network connection. Requires appropriate permissions and access controls to ensure legal and ethical compliance.
+
+  	- **Network-Based Data Capture:**
+
+  		- Intercepting and capturing data packets as they traverse a network, often using specialized hardware or software tools such as packet sniffers or network intrusion detection systems (NIDS).
+
+- **Chain of Custody Documentation:**
+
+	- Documenting the chronological history of evidence collection, handling, and transfer to establish its integrity and admissibility in legal proceedings. Includes details such as who collected the evidence, when and where it was collected, and any changes in possession or custody.
+
+- **Hashing Techniques for Data Integrity Verification:**
+
+	- Using cryptographic hash functions to generate unique identifiers (hash values) for data sets, allowing verification of data integrity by comparing hash values before and after acquisition. Common hashing algorithms include MD5, SHA-1, and SHA-256.
+
+- **Legal Considerations and Compliance Requirements:**
+	- Understanding the legal and regulatory frameworks governing data acquisition and forensic investigations, including privacy laws, chain of custody requirements, and rules of evidence. Compliance with industry standards and organizational policies is also essential.
+
+- **Data Recovery Techniques:**
+
+	- Methods and tools used to recover data from damaged or corrupted storage devices, including hard drives, solid-state drives (SSDs), and removable media. Techniques may include file system repair, sector-by-sector imaging, and specialized data recovery software.
+
+- **RAM Acquisition Tools and Methods:**
+
+	- Tools and techniques for capturing volatile data from system memory (RAM) during live forensics investigations. This may involve using dedicated hardware devices, software utilities, or forensic analysis frameworks to acquire and analyze RAM contents.
+
+- **Write Blocking Mechanisms:**
+
+	- Hardware or software-based mechanisms used to prevent accidental or unauthorized write operations to storage devices during data acquisition. Write blockers ensure data preservation and maintain evidentiary integrity by preventing alterations to original data.
+
+- **Metadata Preservation Techniques:**
+
+	- Preserving metadata associated with digital evidence, including file attributes, timestamps, and file system metadata. This information can provide valuable context and provenance for forensic analysis and legal proceedings.
+
 
 
 ## Preservation of Data
 
-- Use a write blocker
-- 
+
+- **Use a Write Blocker:**
+
+	- Employing hardware or software-based write blockers to prevent any modification or alteration of data during the preservation process. Write blockers ensure the integrity of original evidence by blocking write operations to storage devices, thus preserving the data in its original state.
+
+- **Hashing for Verification:**
+
+	- Generating hash values of preserved data to verify its integrity and authenticity. Hashing algorithms such as MD5, SHA-1, and SHA-256 can be used to create unique fingerprints of data, allowing comparison before and after preservation to ensure no tampering has occurred.
+
+- **Chain of Custody Documentation:**
+
+	- Documenting the handling and transfer of preserved data to establish its integrity and admissibility in legal proceedings. Chain of custody logs should include details such as who collected the data, when and where it was collected, and any changes in possession or custody.
+
+- **Storage in Secure Environment:**
+
+	- Storing preserved data in a secure environment with controlled access to prevent unauthorized tampering or access. This may involve using encrypted storage devices, access controls, and physical security measures to safeguard the integrity of the data.
+
+- **Backup and Redundancy:**
+
+	- Creating backups of preserved data to mitigate the risk of data loss due to hardware failure, corruption, or other unforeseen events. Redundant copies of preserved data should be stored in separate locations to ensure availability and resilience against disasters.
+
+- **Documentation of Preservation Methods:**
+
+	- Documenting the preservation methods and techniques used to maintain the integrity of data throughout the preservation process. This documentation should include details of the tools, procedures, and safeguards employed to ensure the reliability of preserved data.
+
+- **Legal and Regulatory Compliance:** 
+
+	- Ensuring that preservation practices comply with relevant legal and regulatory requirements, including privacy laws, chain of custody standards, and rules of evidence. Adhering to industry best practices and organizational policies is essential to maintaining the defensibility of preserved data in legal proceedings.
+
+- **Periodic Integrity Checks:**
+
+	- Conducting periodic integrity checks on preserved data to verify its continued integrity and detect any signs of tampering or corruption. This may involve re-hashing data, comparing checksums, or using digital forensic techniques to validate the authenticity of preserved evidence.
 
 
-## Reporting 
 
-- E-Discovery is a thing in Azure for holding data, check this out later. 
-- 
+## Reporting
+
+
+- **Types of Reports:**
+
+	- Different types of reports serve various purposes in cybersecurity management and compliance. Incident reports document security incidents and their resolutions, vulnerability assessment reports provide insights into system weaknesses, compliance reports demonstrate adherence to regulatory standards, and executive summaries offer high-level overviews for decision-makers.
+
+- **Incident Reporting Procedures:**
+
+	- Establishing clear incident reporting procedures ensures that security incidents are promptly identified, reported, and addressed. This includes defining reporting channels, outlining incident classification criteria, and specifying response timeframes to minimize the impact of security breaches.
+
+- **Reporting Tools and Software:**
+
+	- Utilizing specialized tools and software enhances the efficiency and effectiveness of security reporting activities. SIEM systems aggregate and correlate security events from multiple sources, log management platforms centralize log data for analysis, and reporting modules within cybersecurity solutions generate customizable reports tailored to specific requirements.
+
+- **Compliance Reporting Requirements:**
+
+	- Compliance reporting is essential for demonstrating adherence to regulatory standards and industry best practices. Organizations must maintain accurate records and documentation to fulfill reporting obligations and demonstrate compliance with applicable laws and regulations.
+
+- **Security Metrics and Key Performance Indicators (KPIs):**
+
+	- Metrics and KPIs provide quantifiable measures of cybersecurity performance and effectiveness. Monitoring key indicators allows organizations to track progress, identify trends, and make informed decisions to improve security posture and mitigate risks.
+
+- **Executive Reporting:**
+
+	- Executive reports distill complex security data into concise summaries tailored to the needs of executive stakeholders. These reports highlight significant security risks, compliance issues, and strategic priorities, enabling informed decision-making at the highest levels of the organization.
+
+- **Data Visualization Techniques:**
+
+	- Data visualization enhances the readability and interpretability of security reports by presenting information in visual formats. Charts, graphs, and dashboards transform raw data into meaningful insights, enabling stakeholders to quickly grasp trends, patterns, and anomalies.
+
+- **Continuous Improvement and Feedback:**
+
+	- Continuous improvement fosters the evolution of reporting processes and practices to meet changing organizational needs and industry trends. Soliciting feedback from stakeholders promotes collaboration and ensures that reporting mechanisms remain relevant, accurate, and actionable over time.
+
+- **Documentation and Record Keeping:**
+
+	- Documentation and record-keeping are critical for maintaining an audit trail of security activities and decisions. Detailed records support accountability, facilitate compliance reporting, and provide evidence for audits, investigations, and legal proceedings.
+
+- **Training and Awareness Programs:**
+
+	- Training and awareness programs educate employees on their roles and responsibilities in reporting security incidents and maintaining data confidentiality. By promoting a culture of vigilance and accountability, organizations empower employees to proactively identify and report security threats, contributing to overall cybersecurity resilience.
+
 
 
 ## Data Sources, Dashboards, and Reports
 
-- Know all the different log types
-- Learn to identify the different logs for the test.
-- Firewall Logs 
-	- Accept/Deny Logs
+
+- **Types of Data Sources:**
+
+	- Understand the various types of data sources commonly used in cybersecurity, including logs from network devices (e.g., firewalls, routers), endpoint logs (e.g., antivirus logs, system logs), cloud service logs, application logs, and external threat intelligence feeds. Different data sources provide unique insights into security events and threats, enabling comprehensive threat detection and analysis.
+
+- **Components of Dashboards:**
+
+	- Dashboards are interactive visual interfaces that display key metrics, KPIs, and insights from data sources. Components of dashboards may include charts, graphs, tables, heatmaps, gauges, and widgets. Dashboards allow users to monitor security posture, track performance metrics, and identify trends or anomalies in real-time, facilitating informed decision-making and situational awareness.
+
+- **Types of Reports:**
+
+	- Reports in cybersecurity serve various purposes, such as incident reporting, compliance reporting, executive reporting, and trend analysis. Incident reports document security incidents and their resolutions, compliance reports demonstrate adherence to regulatory standards, executive reports provide high-level overviews for decision-makers, and trend analysis reports identify patterns and emerging threats based on historical data.
+
+- **Data Visualization Techniques:**
+
+	- Data visualization techniques enhance the readability and interpretability of reports and dashboards by presenting data in visual formats. Common data visualization techniques include charts (e.g., bar charts, line charts, pie charts), graphs (e.g., network graphs, tree maps), heatmaps, histograms, scatter plots, and infographics. Visualization techniques help stakeholders quickly grasp complex information, identify patterns, and derive insights from data.
+
+- **Importance of Data Integrity:**
+
+	- Data integrity is essential for ensuring the accuracy, reliability, and trustworthiness of reports and dashboards. Maintaining data integrity involves verifying the completeness, consistency, and correctness of data across its lifecycle. Measures to preserve data integrity include implementing access controls, encryption, data validation checks, audit trails, and data quality assurance processes. Upholding data integrity enhances the credibility of reports and dashboards, supporting informed decision-making and effective cybersecurity operations.
+
 
 
 
 ## Metadata
 
-- Data about Data
-- 
+- **Definition and Types:**
+
+
+	- Metadata refers to data that provides information about other data. It includes descriptive attributes that characterize the content, context, structure, and usage of data. Types of metadata commonly encountered in cybersecurity include technical metadata (e.g., file format, data size), descriptive metadata (e.g., file name, author), administrative metadata (e.g., access permissions, creation date), and structural metadata (e.g., data relationships, file hierarchy).
+
+- **Importance in Cybersecurity:**
+
+	- Metadata plays a crucial role in cybersecurity for various purposes, such as data classification, data management, information retrieval, forensic analysis, and compliance auditing. By providing contextual information about data assets, metadata enhances data visibility, governance, and protection, enabling organizations to better understand, manage, and secure their digital assets.
+
+- **Examples of Metadata:**
+
+	- Examples of metadata include file attributes (e.g., file name, file type, file size), document properties (e.g., author, creation date, modification date), network packet headers (e.g., source IP address, destination IP address, protocol type), email headers (e.g., sender address, recipient address, subject line), and database schema information (e.g., table names, column names, data types).
+
+- **Risks and Challenges:**
+
+	- Despite its utility, metadata can pose risks and challenges in cybersecurity, such as privacy concerns, data leakage, metadata poisoning, and metadata extraction attacks. Inadequate metadata management practices may result in unauthorized access, data breaches, and regulatory compliance violations. Organizations must address these risks by implementing robust metadata governance frameworks and security controls.
+
+- **Metadata Management Best Practices:**
+
+	- Effective metadata management practices are essential for maximizing the benefits of metadata while mitigating associated risks. Best practices include implementing metadata standards and schemas, establishing metadata repositories and catalogs, enforcing metadata quality controls, documenting metadata lineage and provenance, and integrating metadata management into broader data governance and security frameworks.
+
 
 
 ## Security Information and Event Management
 
-- Agent based
-- 
+
+- **Agent-based:**
+
+	- Agent-based SIEM systems deploy software agents on individual devices or endpoints to collect and send security event data to a centralized SIEM server for analysis and correlation. These agents monitor local logs, network traffic, and system activity, providing real-time visibility into security events and threats at the endpoint level. Agent-based deployment offers granular visibility and control but may incur performance overhead and management complexity.
+
+- **Agentless:**
+
+	- Agentless SIEM systems leverage network-based sensors or log collectors to gather security event data from devices and network infrastructure without installing agents on individual endpoints. These sensors passively monitor network traffic, log files, and system events, extracting relevant data for analysis and correlation. Agentless deployment reduces overhead and simplifies management but may provide less visibility into endpoint activity compared to agent-based approaches.
+
+- **Centralized Logging:**
+
+	- Centralized logging is a fundamental component of SIEM systems, enabling the collection, storage, and analysis of security event data from diverse sources across an organization's IT infrastructure. Centralized logging consolidates log data from endpoints, servers, applications, network devices, and cloud services into a unified repository, facilitating centralized monitoring, analysis, and reporting for security operations.
+
+- **Log Aggregation:**
+
+	- Log aggregation involves collecting and combining log data from multiple sources into a single repository for analysis and correlation. SIEM platforms use log aggregation techniques to aggregate logs from diverse sources, normalize log formats, and enrich log data with contextual information for effective threat detection and incident response. Log aggregation enhances visibility and simplifies analysis by providing a unified view of security events and activities.
+
+- **Correlation Rules:**
+
+	- Correlation rules are predefined logic or algorithms used by SIEM systems to identify patterns, trends, and relationships among security events and alerts. These rules analyze event data in real-time or near-real-time, comparing events against established criteria to detect suspicious or anomalous behavior indicative of security threats. Correlation rules help prioritize alerts, reduce false positives, and automate incident response processes.
+
+- **Alerting and Notification:**
+
+	- SIEM systems generate alerts and notifications to notify security personnel of detected security incidents, anomalies, or policy violations. Alerts may be triggered based on predefined correlation rules, thresholds, or manual configuration settings. SIEM platforms support various alerting mechanisms, such as email notifications, SMS alerts, dashboard alerts, and integration with ticketing systems or incident response platforms.
+
+- **Incident Response Integration:**
+
+	- SIEM systems integrate with incident response workflows and processes to facilitate timely detection, investigation, and response to security incidents. Integration with incident response tools, ticketing systems, and workflow orchestration platforms enables seamless coordination and collaboration among security teams, streamlining incident triage, analysis, and remediation efforts.
+
 
 
 ## Alert Tuning
 
 
-- Techniques for Tuning
-	- Muting
-	- Redirecting "floods"
-	- 
+- **Techniques for Tuning:**
+
+	- **Muting:**
+
+		- Muting involves temporarily suppressing or silencing alerts for specific events or conditions that are known to be benign or expected behavior. By muting non-critical alerts, security teams can reduce alert fatigue and focus their attention on more significant security events and threats.
+  
+	- **Redirecting "Floods":** 
+
+		- Redirecting floods refers to redirecting or consolidating alerts generated from a high volume of similar events within a short period. Instead of generating separate alerts for each instance of the same event, security teams can aggregate these alerts into a single notification or summary, reducing noise and improving efficiency in alert management.
+  
+	- **Threshold Adjustment:** 
+
+		- Threshold adjustment involves fine-tuning alert thresholds and criteria to better align with the organization's risk tolerance and operational needs. By adjusting thresholds for event severity, frequency, or other parameters, security teams can tailor alerting rules to prioritize high-impact events while minimizing false positives and noise.
+  
+	- **Whitelisting/Blacklisting:** 
+
+		- Whitelisting and blacklisting are techniques used to selectively enable or disable alerts based on predefined criteria or lists. Whitelisting allows security teams to specify trusted entities, behaviors, or conditions that should not trigger alerts, while blacklisting identifies known malicious or unwanted activities that should be flagged for further investigation. These techniques help customize alerting rules to reflect the organization's security policies and priorities.
+
+- **Importance of Alert Tuning:** 
+
+	- Alert tuning is crucial for optimizing the effectiveness and efficiency of security monitoring and incident response processes. By fine-tuning alerting rules and thresholds, organizations can reduce alert fatigue, prioritize high-impact events, and improve the accuracy of threat detection and response.
+
+- **Challenges in Alert Tuning:** 
+
+	- Alert tuning presents several challenges, including the risk of overlooking critical alerts, the complexity of managing a large volume of alerts, and the difficulty of balancing sensitivity and specificity in alerting rules. Additionally, changing threat landscapes, evolving business requirements, and technology complexities can further complicate the alert tuning process.
+
+- **Best Practices for Effective Alert Tuning:** 
+
+	- Effective alert tuning requires a systematic approach and adherence to best practices. Key practices include regularly reviewing and updating alerting rules, leveraging automation and machine learning techniques for intelligent alert triage, collaborating with stakeholders to understand business priorities and risk tolerances, and continuously monitoring and refining alerting processes based on feedback and lessons learned.
+
+- **Continuous Monitoring and Review:** 
+
+	- Alert tuning is an ongoing process that requires continuous monitoring and review to adapt to evolving threats, technologies, and business needs. Security teams should establish regular cadences for reviewing alerting rules, thresholds, and performance metrics, ensuring that alerting processes remain effective, efficient, and aligned with organizational objectives.
 
 
-## Monitering Infastructure
+## Monitoring Infrastructure
 
 
-- Network Moniters
-- Appliance state data
-- Simple Network Managment Protocol (SNMP) traps
-- Netflow/IPFIX (Internet Protocol Flow Information Export)
-- Cloud Service health
--
+- **Network Monitors:** 
+
+	- Network monitors are tools or systems used to monitor network traffic and devices for performance, availability, and security issues. These tools capture and analyze network packets, monitor bandwidth utilization, detect network anomalies, and provide visibility into network infrastructure components such as routers, switches, firewalls, and servers.
+
+- **Appliance State Data:** 
+	- Appliance state data refers to information about the operational status and health of network appliances and devices. This data includes metrics such as CPU utilization, memory usage, disk space, interface status, and system uptime. Monitoring appliance state data helps ensure the reliability, performance, and availability of network infrastructure components.
+
+- **Simple Network Management Protocol (SNMP) Traps:** 
+
+	- SNMP traps are asynchronous notifications sent by network devices to a central management system (SNMP manager) to alert administrators of significant events or conditions. Traps provide real-time alerts for events such as device reboots, interface status changes, error conditions, and security breaches. SNMP traps enable proactive monitoring and troubleshooting of network devices.
+
+- **Netflow/IPFIX (Internet Protocol Flow Information Export):** 
+
+	- Netflow and IPFIX are protocols used for collecting and exporting flow data from network devices for traffic analysis and monitoring. These protocols capture information about network flows, including source and destination IP addresses, ports, protocols, and packet counts. Netflow and IPFIX data provide insights into network traffic patterns, application usage, and security threats.
+
+- **Cloud Service Health:** 
+
+	- Monitoring cloud service health involves tracking the performance, availability, and reliability of cloud-based services and resources. Cloud service providers typically offer monitoring tools and dashboards to monitor service health indicators such as uptime, latency, response times, and service-level agreements (SLAs). Monitoring cloud service health ensures optimal performance and user experience for cloud-based applications and services.
+
+- **Syslog Servers:** 
+
+	- Syslog servers are centralized log management systems used to collect, store, and analyze log data from network devices, servers, applications, and security appliances. Syslog servers receive syslog messages generated by network devices and servers, providing a consolidated view of system and network events. Monitoring syslog data helps identify security incidents, troubleshoot performance issues, and ensure compliance with logging requirements.
+
 
 
 ## Benchmarks
 
 
-- Scanning for configuration vulnerabilities
-- Lack of controls
-- Improper configuration
-- Security content automation protocol (SCAP)
-- Language to enable scanners to load configuration benchmarks and scan for deviations. 
+- **Scanning for Configuration Vulnerabilities:** 
+
+	- Benchmarks involve scanning systems and networks for configuration vulnerabilities, which are weaknesses resulting from misconfigurations or deviations from secure configuration baselines. Configuration vulnerability scanning tools identify insecure settings, outdated software versions, and misconfigured access controls that could expose systems to security risks.
+
+- **Lack of Controls:**
+
+	- Benchmarks assess the presence or absence of security controls implemented to mitigate risks and protect systems and networks. Security controls include preventive, detective, and corrective measures such as firewalls, intrusion detection systems (IDS), access controls, encryption, and security policies. Identifying gaps or deficiencies in security controls helps prioritize remediation efforts and strengthen overall security posture.
+
+- **Improper Configuration:** 
+
+	- Benchmarks evaluate the correctness and effectiveness of system configurations in aligning with security best practices and standards. Improper configurations may include default settings, unnecessary services or protocols enabled, weak authentication mechanisms, and misconfigured access permissions. Addressing improper configurations reduces the attack surface and minimizes the likelihood of successful exploitation by threat actors.
+
+- **Security Content Automation Protocol (SCAP):**
+
+	- SCAP is a standardized protocol developed by the National Institute of Standards and Technology (NIST) for automating security compliance assessment, measurement, and reporting. SCAP enables organizations to streamline vulnerability assessment, configuration management, and security policy enforcement across heterogeneous IT environments. SCAP-compliant tools use standardized data formats and protocols to exchange security-related information and automate security tasks.
+
+- **Language to Enable Scanners to Load Configuration Benchmarks and Scan for Deviations:**
+
+	- Benchmarks utilize a language or format that enables security scanners to load configuration benchmarks and compare system configurations against predefined standards or benchmarks. This language allows scanners to identify deviations or non-compliant settings and generate reports detailing security posture and compliance status. Examples of benchmark formats include Extensible Configuration Checklist Description Format (XCCDF) and Open Vulnerability and Assessment Language (OVAL).
+
 
 
 
 ## Malware Classification
 
-- **Viruses**
+
+- **Viruses:**
+
 	- Spread within code without authorization.
 
-- **Worms**
+- **Worms:**
+
 	- Self-replicating malware that spreads across networks.
 
-- **Trojans**
+- **Trojans:**
+
 	- Malicious programs disguised as legitimate software.
 
-- **Potentially Unwanted Programs (PUPs)**
+- **Potentially Unwanted Programs (PUPs):**
+
 	- Software that may be unwanted or harmful, but not necessarily classified as malware.
 
-- **Pre-installed Bloatware**
+- **Pre-installed Bloatware:**
+
 	- Software pre-installed on devices by manufacturers, often unnecessary and resource-intensive.
 
-- **Grayware**
+- **Grayware:**
+
 	- Software that exhibits behaviors similar to both legitimate software and malware, such as adware or spyware.
 
-- **Classification by Payload**
+- **Classification by Payload:**
+
 	- Categorization based on the type of malicious activity or impact, such as ransomware, spyware, or keyloggers.
 
-- Tracking Cookies 
-- Adware
-- Spyware
-- Keylogger
-- 
+- **Tracking Cookies:**
+
+	- Cookies used to track user activity online, often for targeted advertising purposes.
+
+- **Adware:**
+
+	- Software that displays unwanted advertisements to users, often bundled with other software.
+
+- **Spyware:**
+
+	- Malware designed to secretly monitor and gather information about a user's activities.
+
+- **Keylogger:**
+
+	- Malware that records keystrokes typed by a user, often used to capture sensitive information such as passwords or credit card numbers.
+
 
 
 ## Backdoors and Remote Access Trojans (RAT)
