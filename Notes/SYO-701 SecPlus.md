@@ -1041,11 +1041,18 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 - **Defining Risk**
-	- **Inherent** (total) risk:
-		- Risk the orginazation faces if safeguard is not implemented
-	- **Residual**:
-		- Risk that remains once a safeguard is in place
-	- **Residual = inherent risk-safeguards (controls)**
+	- Usually described as a percentage, or probability.
+
+		- **Inherent** (total) risk:
+			- Risk the orginazation faces if safeguard is not implemented
+		- **Residual**:
+			- Risk that remains once a safeguard is in place
+		- **Residual = inherent risk-safeguards (controls)**
+
+
+- **Assessing Risk**
+	- What are your assets at risk?
+		- Both tangable and non-tangable
 
 
 
