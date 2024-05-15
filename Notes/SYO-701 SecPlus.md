@@ -11,6 +11,41 @@
 
 
 
+# Disclaimer:  These are not comprehensive notes. These are a rough draft of class notes, and study notes, I will remove this when they are complete.
+
+
+
+
+
+
+
+
+
+
+# Domain 1:Threats, Attacks, and Vulnerabilities
+# Domain 2: Technologies and Tools
+# Domain 3: Architecture and Design
+# Domain 4: Identity and Access Management
+# Domain 5: Risk Management
+# Domain 6: Cryptography and PKI (Public Key Infrastructure)
+
+
+`Don't forget to sort by domain later`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Gap Analysis
 
@@ -53,12 +88,6 @@ The Policy engine (PE), which uses the enterprise policy-driven access control p
 The policy administrator (PA) which enables or shuts down the communication path between subject and a resource  via commands to associated policy enforcement points (PEPs)
 
 - The PA communicates with the PEP when creating the communication path via the control plane. 
-
-
-
-
-
-``` There is a gap in information here, more will be added above this line ```
 
 
 
@@ -175,9 +204,13 @@ The policy administrator (PA) which enables or shuts down the communication path
 - Users are assigned roles, and access rights and are associated with these roles.
 
 - Instead of directly assigning permissions to individual users, permissions are assigned to roles, and users inherit the access rights associated with their assigned roles, for example:
+
 	- Various Roles in a hospital or medical center
+
 	- Built-in roles in a database management system
+
 	- RBAC streamlines access control administration by grouping users with similar job functions and offering scalable approach to access management.
+
 	- Can be mixed with other models for ease of use
 
 
@@ -186,16 +219,22 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - A Strict mathematical model where access to resources is determined by the system based on predefined security labels and rules.
 
+
 - Principals are assigned security clearances or classification levels (Top Secret, Secret, Confidential, Etc.)
+
 
 - Resource objects are labeled with sensitivity levels
 
 - Access is granted or denied by comparing these labels and rules, ensuring strict control and preventing unauthorized access.
 
 - This is a "Non -Discretionary" model:
+
 	- A non-discretionary model refers to a security policy where access control decisions are determined by system administrators or security administrators rather than by individual users.
+
 	- In non-discretionary models, users do not have the discretion to modify or override access control settings for resources.
+
 	- Access decisions are typically based on predefined rules, such as security labels or classifications assigned to users and resources, rather than on user-defined permissions.
+
 	- This approach helps enforce strict access controls and reduces the risk of unauthorized access or data breaches.
 
 
@@ -205,8 +244,11 @@ The policy administrator (PA) which enables or shuts down the communication path
 - Grants access based on a combination of characteristics associated with users, resources, and environmental conditions. 
 
 - Attributes could include:
+
 	- User Attributes (Job Title, Department, Etc)
+
 	- Resource Attributes (Sensitivity level, classification, etc.)
+
 	- Environmental attributes (time fo access, location, etc.).
 
 - Authorization policies are defined using these combinations, and decisions are made based on evaluating the attributes against the defined policies.
@@ -245,6 +287,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 - These controls involve the use of technology to protect information systems, networks, and data. Examples include:
+
 	- Firewalls, encryption, access controls, antivirus software, IDS, SIEM, and SOAR.
 
 
@@ -252,6 +295,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 - These controls focus on policies, procedures, and administrative measures to manage and oversee security within an organization. Examples include:
+
 	- Security policies, risk management processes, security training and awareness programs, and incident response plans.
 
 
@@ -259,6 +303,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 - These controls deal with the day-to-day operational aspects of security, including the implementation and enforcement of security policies and procedures. Examples include:
+
 	- Access control procedures, backup and recovery processes, change management procedures, and system monitoring.
 
 
@@ -266,6 +311,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 - These controls involve measures to protect physical assets, facilities, and resources from unauthorized access, damage, or theft. Examples include:
+
 	- Locks and keys, access control systems, surveillance cameras, perimeter fencing, and environmental controls such as fire suppression systems.
 
 
@@ -282,6 +328,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 - These controls aim to prevent security incidents from occurring by implementing measures that stop or minimize the likelihood of threats and vulnerabilities being exploited. Examples include:
+
 	- Firewalls, access control lists, encryption, and security awareness training.
 
 
@@ -289,6 +336,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 - Deterrent controls are intended to discourage potential attackers from attempting to exploit vulnerabilities by increasing the perceived risk or effort required. Examples include:
+
 	- Security signage, visible security cameras, and security patrols.
 
 
@@ -296,6 +344,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 - Detective controls are used to identify and detect security incidents or breaches after they have occurred. These controls help in monitoring and alerting security teams to abnormal or suspicious activities. Examples include:
+
 	- Intrusion detection systems, security logs and auditing, and security incident response teams.
 
 
@@ -303,6 +352,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 - Corrective controls are implemented to mitigate the impact of security incidents and restore systems to their normal functioning state. These controls aim to address the root cause of the issue and prevent similar incidents from occurring in the future. Examples include:
+
 	- System backups, patch management, and incident response procedures.
 
 
@@ -310,6 +360,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 - Compensating controls are alternative measures implemented to provide an equivalent level of security when primary controls cannot be implemented or are ineffective. These controls help in mitigating risks and maintaining security posture. Examples include:
+
 	- Multi-factor authentication, compensating controls for legacy systems, and security monitoring tools.
 
 
@@ -317,6 +368,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 - Directive controls establish policies, guidelines, and procedures to direct behavior and actions within an organization to ensure compliance with security objectives. These controls provide guidance on security requirements and expectations for employees and stakeholders. Examples include:
+
 	- Security policies, standards, and procedures, security training programs, and access control policies.
 
 
@@ -343,7 +395,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - Having current versions of all software (OS, applications, etc) can help mitigate this.
 
-- SUID (Set User ID [SUDO]) It is a special permission in Unix-like operating systems that allows users to execute a file with the permissions of the file's owner or group, rather than with the permissions of the user who is executing it.
+- SUID (Set User ID `SUDO`) It is a special permission in Unix-like operating systems that allows users to execute a file with the permissions of the file's owner or group, rather than with the permissions of the user who is executing it.
 
 
 
@@ -391,9 +443,13 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 - Attack forces an end user to perform undesirable actions in a web application in which they are authenticated
+
 	- An effective CSRF/XSRF attack can force users to perform state-changing requests such as:
+
 		- Transferring Funds
+
 		- Changing their E-Mail address
+
 		- Changing their password
 
 - If a victim is an admin account, the CSRF attack can compromise the entire web application. 
@@ -406,7 +462,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - Malware can inject false MAC or IP addresses.
 
-- DLL injection is where malicious code forces itsself to rin in place of other benign code.
+- DLL injection is where malicious code forces its-self to run in place of other benign code.
 
 - This "Injected" code is usually code written by a third party developer, designed to perform some malicious function
 
@@ -415,12 +471,19 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 - Involves inserting a SQL query through input data from client to server application and can allow for several exploits. 
+
 	- Read from sensitive data
+
 		`SELECT FROM`
+
 	- Change database data
+
 		`INSERT, UPDATE, DELETE`
+
 	- Execute administrative functions 
+
 		`shutdown DBMS`
+
 	- Run commands on an operating system
 
 
@@ -441,11 +504,11 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - User input is inserted unsafely
 
-- XML metacharacters can be used to modify
+- XML meta-characters can be used to modify
 
 - Can interfere with application logic
 
-- Performs unauthorized tasks or accessable data. 
+- Performs unauthorized tasks or accessible data. 
 
 
 
@@ -457,13 +520,13 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 
 
-## Pointer/object dereference
+## Pointer/object de-reference
 
 - An attacker can supply a pointer for memory locations that the program is not expecting
 
-- A Null-pointer dereference occurs when a pointer with a value of NULL is used as if it actually points to a valid memory area
+- A Null-pointer de-reference occurs when a pointer with a value of NULL is used as if it actually points to a valid memory area
 
-- A program can possibly dereference a null pointer, and in doing so, raise a NullPointerException
+- A program can possibly de-reference a null pointer, and in doing so, raise a NullPointerException
 
 - Null pointer errors are frequently the result of one or more programmer assumptions being violated. 
 
@@ -489,11 +552,11 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 	- Associated buffers are filled and adjacent memory is overwritten as a result.
 
-	- This everwrite may contain instructions or code that crashes the server resulting in a DoS.
+	- This overwrite may contain instructions or code that crashes the server resulting in a DoS.
 
 - **Integer Overflows**
 
-	- A Type of an arthmetic overflow error when the result of an integer operation does not fit  within the allocated memory space.
+	- A Type of an arithmetic overflow error when the result of an integer operation does not fit  within the allocated memory space.
 
 	- Instead of an error in the program, it usually causes the result to be unexpected.
 
@@ -503,7 +566,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - **Race Condition**
 
-	- A race condition is when a system or software trise to do two or more things simultaneously, but due to the type of system, the operations must be done in the correct sequence in order or function properly.
+	- A race condition is when a system or software tries to do two or more things simultaneously, but due to the type of system, the operations must be done in the correct sequence in order or function properly.
 
 	- Race conditions are classically related to synchronization errors in software code.
 
@@ -525,7 +588,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 	- Must establish data input, data flow, and data output requirements with a designed security features in mind.
 
-	- Collusions are in this category when the chance that two unique inputs will produce the same output (MD5 and SHA-1 are vulnerable)
+	- Collisions are in this category when the chance that two unique inputs will produce the same output (MD5 and SHA-1 are vulnerable)
 
 - **Session replay attacks**
 
@@ -550,11 +613,11 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - Application Programming Interface Attacks:
 
-	- An API DDoS attack often involces sending traffic from many clients to overwhelm the API service
+	- An API DDoS attack often involves sending traffic from many clients to overwhelm the API service
 
 	- Even if rate limiting controls are in place to prevent servers from crashing, they cannon always prevent service disruption and severe degradation of the API's user expierence.
 
-	- If API calls are not digitally signed or if they have embeded credentials, they can be compromised.
+	- If API calls are not digitally signed or if they have embedded credentials, they can be compromised.
 
 
 ## API Attack Vectors
@@ -591,7 +654,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 	- Let's say an attacker gains access to a system and retrieves the hashed password of a privileged user. Instead of cracking the hash to obtain the plaintext password, the attacker can use the hashed password directly to authenticate to other systems where the same password is used. By passing the hashed password, the attacker can potentially gain unauthorized access to additional systems within the network without needing the actual password. This method bypasses traditional authentication mechanisms that rely on verifying plaintext passwords, making it a powerful technique for attackers to escalate their privileges and move laterally within the network.
 
-	- On Windows networks, hackers do not need the plaintext passwords to access certian services.
+	- On Windows networks, hackers do not need the plaintext passwords to access certain services.
 
 	- Sometimes the authentication process relies on the passwords cryptographic hash and there are various tools to extract these hashes (Cain) from compromised Windows machines (Lately Windows 10) and use them to access other services.
 
@@ -599,7 +662,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - By definition a Pass the Hash is a vulnerability of Windows Safe Mode.
 
-	- It is an OS diagnostic mode of peration that has been around since windows 95
+	- It is an OS diagnostic mode of operation that has been around since windows 95
 
 	- It can be initiated at the boot time and only loads the nominal set of drivers and services that windows needs to run.
 
@@ -618,9 +681,9 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - A Common vector is the hardware drivers that we install in our operating systems
 
-- This is priveleged code that is trusted by the OS
+- This is privileged code that is trusted by the OS
 
-- Can be trojans, RATs, or hacked driver software
+- Can be Trojans, RATs, or hacked driver software
 
 
 ## Shimming
@@ -628,7 +691,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - Shimming is the process of stealing information and money from Point-of-Sale (POS) systems, credit card readers, and ATM machines.
 
-- The attack is common at gas stations, convienence stores, and kiosks.
+- The attack is common at gas stations, convenience stores, and kiosks.
 
 - It can be an overlay attachment or sometimes and entirely replaced device.
 
@@ -684,7 +747,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 	- Examples Include:
 
-		- An attacker sends deauthentication packets to users connected to a public Wi-Fi network, causing them to lose connectivity.
+		- An attacker sends de-authentication packets to users connected to a public Wi-Fi network, causing them to lose connectivity.
 
 		- Disrupting a business's wireless network during a critical meeting by sending disassociation frames to all connected devices.
 
@@ -718,9 +781,9 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 		- Brute-forcing weak passwords protected by WPA3-Personal encryption to gain access to the network.
 
-### Bluesnarfing
+### Blue-snarfing
 
-- Bluesnarfing involves unauthorized access to information on a Bluetooth-enabled device, such as contacts, emails, or files.
+- Blue-snarfing involves unauthorized access to information on a Bluetooth-enabled device, such as contacts, emails, or files.
 
 	- Examples Include:
 
@@ -728,9 +791,9 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 		- Using specialized software to intercept Bluetooth communications between a mobile device and a car's infotainment system to steal sensitive information.
 
-### Bluejacking
+### Blue-jacking
 
-- Bluejacking is the act of sending unsolicited messages or data to Bluetooth-enabled devices within range, often for advertising or social engineering purposes.
+- Blue-jacking is the act of sending unsolicited messages or data to Bluetooth-enabled devices within range, often for advertising or social engineering purposes.
 
 	- Examples Include:
 
@@ -780,7 +843,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 ## Man-in-the-Browser Attack
 
-- Man-in-the-Browser attack uses the saem tactics as the MITM except that a Trojan horse is used to capture and manipulate calls between the main browser and its security mechanisms (or libraries) on an ad-hoc basis. 
+- Man-in-the-Browser attack uses the same tactics as the MITM except that a Trojan horse is used to capture and manipulate calls between the main browser and its security mechanisms (or libraries) on an ad-hoc basis. 
 
 - The most common usage is financial fraud, which manipulates transactions of Internet banking and brokerage sites. 
 
@@ -803,7 +866,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - Malicious hosts inject false frames in order to corrupt (poison) the ARP cache buffers on endpoints, switches, servers, firewalls, and routers.
 
-- Exploit kits have seceral scripts, modules, and tools to compromise the ARP protocol.
+- Exploit kits have several scripts, modules, and tools to compromise the ARP protocol.
 
 - It can be mitigated with port security, snooping binding databases on switches, MACsec implementation 802.1AE
 
@@ -840,7 +903,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 ## Domain Hijacking DNS Attack
 
 
-- Domain hijacking or clickjacking, is also called user interface redress attack, UI redress attack, and UI redressing.
+- Domain hijacking or click-jacking, is also called user interface redress attack, UI redress attack, and UI redressing.
 
 - Hacker uses several transparent layers to trick users into clicking on a button (or link) on another web page when they were actually trying to click on the top-level web page.
 
@@ -941,10 +1004,12 @@ The policy administrator (PA) which enables or shuts down the communication path
 	- Drive-by Web Surfing
 	- No AUP
 	- Poor awareness
-	- E-mail and webmail
+	- E-mail and web-mail
 	- USB's and personal electronics
 - Multi-Party Risks
-	- Orgini
+	- Organizations that operate with outsourcing, suppliers, licensees, agents, and the like.
+	- The frequency and scale of third-party use has grown substantially over the last two decades.
+	- There is greater regulatory emphasis on how organizations manage third parties to address the inherent risks
 
 	## Internal Risks
 
@@ -953,26 +1018,46 @@ The policy administrator (PA) which enables or shuts down the communication path
 		- Poor physical security
 		- Lack of additional authentication Factors
 		- Non-enforcement of security policy
-		- Substandard auditing and monitering of priveleged insiders
+		- Substandard auditing and monitoring of privileged insiders
 		- Poor patch, configuration, and change management
 		- Lack of automated vulnerability assessment
 		- Absence of endpoint detection
 
 
+## Risk Management Strategies 
+
+- Risk Acceptance
+	- Do not implement safeguards
+		- Justification in writing is often required
+- Risk Avoidance
+	- Choose not to undertake actions that reduce risk
+- Risk Transference/sharing
+	- Pass the risk to a third-party, such as an insurance company or a cloud service provider.
+- Risk mitigation
+	- Implement safeguards that will eliminate or reduce risk exposure - risk may exist, but impact is reduced
+
+
+## Risk Analysis
+
+
+- **Defining Risk**
+	- **Inherent** (total) risk:
+		- Risk the orginazation faces if safeguard is not implemented
+	- **Residual**:
+		- Risk that remains once a safeguard is in place
+	- **Residual = inherent risk
 
 
 
 
 
-
-
-`//////////////////////////Line seperator here for when I need to add something, Check this out, It Probably needs removed later///////////////////////////////////////////////////`
+`//////////////////////////Line separator here for when I need to add something, Check this out, It Probably needs removed later///////////////////////////////////////////////////`
 
 
 
 
 
-# Rough Class Notes (Forensics)
+# Forensics
 
 
 
