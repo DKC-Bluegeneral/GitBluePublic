@@ -249,7 +249,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 	- Resource Attributes (Sensitivity level, classification, etc.)
 
-	- Environmental attributes (time fo access, location, etc.).
+	- Environmental attributes (time of access, location, etc.).
 
 - Authorization policies are defined using these combinations, and decisions are made based on evaluating the attributes against the defined policies.
 
@@ -574,7 +574,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - **Time-Of-Check vs. Time-Of-Use (TOC/TOU)**
 
-	- A time-of-check vs time-of-use attack is a race condition and occurs when an attacker tries to gain privelege to a system by "racing" it to a resource it is attempting to access.
+	- A time-of-check vs time-of-use attack is a race condition and occurs when an attacker tries to gain privilege to a system by "racing" it to a resource it is attempting to access.
 
 	- The types of programming flaws that allow for race conditions occur when the system (or application) splits up the operations of verifying credentials and providing access to a resource.
 
@@ -1219,7 +1219,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 ## Disaster Types and Classifications
 
-- **Enviromental**
+- **Environmental**
 
 	- Earthquakes
 
@@ -1279,13 +1279,13 @@ The policy administrator (PA) which enables or shuts down the communication path
 ## Business Impact Analysis
 
 
-- Risk assessment aspect of the Business Contitinuity Plan (BCP)
+- Risk assessment aspect of the Business Continuity Plan (BCP)
 
 	- Identify critical functions to the business and prioritize them based on need for survival
 
-- Identify the risks assiciated with the critical funcations
+- Identify the risks associated with the critical functions
 
-	- The probability of risk occuring (Likelihood)
+	- The probability of risk occurring (Likelihood)
 
 	- The impact the risk will have (Magnitude)
 
@@ -1294,7 +1294,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 ## Recovery Time Objective (RTO)
 
-- The amount of time avaliable to recover the resource, service, or platform
+- The amount of time available to recover the resource, service, or platform
 
 	- This must be equal to or less than the Maximum Tolerable Downtime (MTD)
 
@@ -1345,7 +1345,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 	- Measures time it takes to fix it
 
-	- Average value predicted based on expierence and documentation. 
+	- Average value predicted based on experience and documentation. 
 
 	- It can be calculated by:
 
@@ -1354,7 +1354,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 ## Maximum Tolerable Downtime
 
-- Absolute maximum amount of time that a resource, service, or function can be unavaliable before we start to expierence a loss
+- Absolute maximum amount of time that a resource, service, or function can be unavailable before we start to experience a loss
 
 - Factors to consider are:
 
@@ -1362,7 +1362,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 	- Life/Safety
 
-	- Reglatory
+	- Regulatory
 
 	- Legal/Contracts
 
@@ -1419,10 +1419,126 @@ The policy administrator (PA) which enables or shuts down the communication path
 	- Long-term damage to the organization's reputation and trustworthiness among customers, partners, and stakeholders.
 
 
+## Data Type Classifications
+
+- **Military Classifications**
+
+	- Top Secret
+
+	- Secret
+
+	- Sensitive but unclassified (SBU)
+
+	- Confidential
+
+	- Unclassified
+
+- **Commercial Classifications**
+
+	- Corporate confidential
+
+	- Personal Confidential
+
+	- Trade secret/Proprietary
+
+	- Private
+
+	- Public
+
+	## Roles and Responsibilities
+
+	- **Chief Privacy officer**
+
+		- Ensures the privacy of all data in the entire organization
+
+	- **Owner**
+
+		- Owner of the information
+
+		- Determines the classification level
+
+	- **Steward**
+
+		- Manager of the data and metadata
+
+		- Ensures compliance (Standards/Controls) and data quality
+
+		- Manages from a business standpoint
+
+	- **Custodian**
+
+		- Keeper of information
+
+		- Ensures C.I.A. is maintained
+
+		- Manages from a technical standpoint
+
+	- **Processors**
+
+		- Handles data entry and input
+
+		- Can be an automated process or script
 
 
+## Privacy Enhancing Techniques
 
-`//////////////////////////Line separator here for when I need to add something, Check this out, It Probably needs removed later///////////////////////////////////////////////////`
+- **Tokenization for Privacy Enhancement**
+
+	- Data tokenization is a technique used to remove directly identifying elements
+
+	- The process replaces the raw data with randomly generated tokens (or pseudonyms)
+
+	- It is most often deployed with structured data, like payment cards or Social Security numbers
+
+	- The original data does not leave the enterprise in order to meet regulatory requirements 
+
+- **Data Minimization for Privacy**
+
+	- A directive that states that collected and processed data should not be kept or used unless it is critical. 
+
+	- The details should be determined early in the life-cycle to support data privacy standards such as the General Data Protection Regulation (GDPR)
+
+	- Data that was collected for one purpose, can not be used for another purpose without consent
+
+
+- **Masking and Anonymization**
+
+	- Also known as data anonymization or pseudonymization
+
+	- Involves stripping out or replacing any data that can identify a subject, Examples include:
+
+		- Personally Identifiable Information (PII)
+
+		- Protected Health Information (PHI)
+
+		- Payment Card Information (PCI-DSS)
+
+		- Intellectual Property (ITAR and EAR)
+
+	- In the military this is known as "Redacting"
+
+
+	## Additional Privacy Concepts
+
+
+	- **Information Life Cycle**
+
+	    - The Information Life Cycle refers to the stages through which data progresses from its creation or acquisition to its eventual disposal. These stages typically include data creation, storage, processing, transmission, and destruction. Organizations must manage data throughout its life cycle to ensure compliance with privacy regulations, maintain data integrity, and protect individuals' privacy rights. For example, data may be collected from customers during online transactions, stored in databases for analysis, transmitted to third-party service providers for processing, and eventually deleted or anonymized when no longer needed.
+
+
+	- **Impact Assessment**
+
+	    - An Impact Assessment, also known as a Privacy Impact Assessment (PIA) or Data Protection Impact Assessment (DPIA), is a systematic evaluation of the potential risks and impacts of a data processing activity on individuals' privacy and data protection rights. Impact assessments are conducted to identify and mitigate privacy risks, assess compliance with privacy regulations such as GDPR, and enhance transparency and accountability in data processing practices. For example, an organization launching a new product or service that involves the collection and processing of personal data may conduct an impact assessment to evaluate the potential privacy risks and implement appropriate safeguards to protect individuals' privacy.
+
+
+	- **Terms of Agreement**
+
+	    - Terms of Agreement, also referred to as Terms of Service (ToS) or Terms and Conditions, are legal agreements between a service provider and users that outline the terms, conditions, and rules governing the use of the service or platform. Terms of Agreement often include provisions related to data collection, processing, and sharing practices, as well as users' rights and responsibilities regarding their personal data. By accepting the terms of agreement, users consent to the service provider's data practices and agree to abide by the specified terms and conditions. For example, social media platforms typically require users to agree to their terms of service, which outline how user data will be collected, used, and shared.
+
+
+	- **Privacy Notices**
+
+	    - Privacy Notices, also known as Privacy Policies or Fair Processing Notices, are statements or documents provided by organizations to individuals that explain how their personal data is collected, processed, used, and protected. Privacy notices inform individuals about their privacy rights, the purposes for which their data is being processed, the legal basis for processing, data sharing practices, and contact information for inquiries or complaints. Organizations are required to provide clear and transparent privacy notices to individuals to ensure compliance with privacy regulations and promote transparency and trust in their data processing practices. For example, when individuals sign up for a new online service or purchase a product, they may receive a privacy notice detailing how their personal data will be handled by the organization.
 
 
 
@@ -1834,7 +1950,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - **Bots and Botnets:**
 
-	- Bots are compromised computers or devices infected with malware that allows them to be controlled remotely by a botmaster. Botnets are networks of interconnected bots that can be harnessed by attackers to perform coordinated attacks, such as distributed denial-of-service (DDoS) attacks, spam campaigns, or credential stuffing attacks. Botnets are often used to propagate malware, steal data, or carry out large-scale cybercrime operations.
+	- Bots are compromised computers or devices infected with malware that allows them to be controlled remotely by a bot-master. Botnets are networks of interconnected bots that can be harnessed by attackers to perform coordinated attacks, such as distributed denial-of-service (DDoS) attacks, spam campaigns, or credential stuffing attacks. Botnets are often used to propagate malware, steal data, or carry out large-scale cyber-crime operations.
 
 - **Command and Control (C2 or C&C):**
 
@@ -1842,7 +1958,7 @@ The policy administrator (PA) which enables or shuts down the communication path
 
 - **Backdoors Installed Through Misconfiguration:**
 
-	- Backdoors can also be inadvertently created through misconfigurations or vulnerabilities in software, services, or devices. Attackers exploit misconfigurations to establish unauthorized access points, bypassing authentication mechanisms and security controls. Common misconfigurations that lead to backdoor installations include default passwords, open ports, insecure network services, and unpatched software vulnerabilities.
+	- Backdoors can also be inadvertently created through misconfigurations or vulnerabilities in software, services, or devices. Attackers exploit misconfigurations to establish unauthorized access points, bypassing authentication mechanisms and security controls. Common misconfigurations that lead to backdoor installations include default passwords, open ports, insecure network services, and un-patched software vulnerabilities.
 
 
 
@@ -1911,6 +2027,49 @@ The policy administrator (PA) which enables or shuts down the communication path
 	- Effective incident response and recovery procedures are essential for minimizing the impact of ransomware attacks and restoring affected systems and data. Organizations should have incident response plans in place to guide response efforts, including containment, eradication, recovery, and communication with stakeholders. Recovery procedures may involve restoring data from backups, decrypting files using decryption tools or services, and rebuilding compromised systems from clean images.
 
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Random
 
