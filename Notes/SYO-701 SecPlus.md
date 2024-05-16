@@ -2027,7 +2027,10 @@ The policy administrator (PA) which enables or shuts down the communication path
 	- Effective incident response and recovery procedures are essential for minimizing the impact of ransomware attacks and restoring affected systems and data. Organizations should have incident response plans in place to guide response efforts, including containment, eradication, recovery, and communication with stakeholders. Recovery procedures may involve restoring data from backups, decrypting files using decryption tools or services, and rebuilding compromised systems from clean images.
 
  
+## Random Class Notes for today
 
+-  Go to skillsoft account access in MyCC
+- 
 
 
 
