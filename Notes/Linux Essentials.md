@@ -33,3 +33,11 @@
   - `/usr/local/sbin:/sbin`
 - Check out "Info Pages" similar to man
 - Apropos
+
+
+
+- Path statement 
+  - `home/tom/documents/text`
+
+
+- `/etc` = Configuration
